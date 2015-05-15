@@ -11,25 +11,18 @@ course rules.
 
 Students will be allowed to set their own hours for solo work during the
 prep course; however, it is ESSENTIAL that you are on time for your
-pairing assignments. Lateness and tardiness show a lack of basic respect
-for your partner and your instructors, and violations will be taken very
-seriously. If for any reason you will not be able to make it to a
-pairing session on time, you must notify us by email at
-contact@appacademy.io.
+pairing assignments. If for any reason you will not be able to make it
+to a pairing session, email us at contact@appacademy.io with as much
+advance notice as possible (24 hours MINIMUM). Any unexcused absence or
+tardiness for a pairing session will be penalized with a "strike", which
+you will carry with you into the main course. Students who accumulate
+ten strikes are dismissed from the course.
 
 ## Learning Environment
 
 Maintaining a focused learning environment is important for everyone.
 Students are required to be focused and working at all times during
 course hours.
-
-## Et Cetera
-
-This is not a comprehensive list of rules. You may receive additional
-instructions from staff regarding staying on task, or showing respect to
-peers and staff. It is important to follow these additional
-instructions. If you are instructed to do something, you will be
-expected to follow through.
 
 ## Zero Tolerance for Harassment
 
@@ -38,6 +31,14 @@ zero-tolerance policy toward discrimination and all forms of unlawful
 harassment, including but not limited to discrimination based on gender,
 sexual orientation, race, or religious affiliation. Any student found to
 behave in violation of this policy will be dismissed from the course.
+
+## Et Cetera
+
+This is not a comprehensive list of rules. You may receive additional
+instructions from staff regarding staying on task, or showing respect to
+peers and staff. It is important to follow these additional
+instructions. If you are instructed to do something, you will be
+expected to follow through.
 
 ## App Academy Intellectual Property
 
