@@ -1,11 +1,16 @@
 # App Academy Prep
 
+- [Week 1](./w1/)
+- [Week 2](./w2/)
+- [Week 3](./w3/)
+- [Week 4](./w4/)
+
 Welcome to App Academy Prep! This course is designed to be completed
 part-time, online, while you are employed, and starts 4 weeks before
 your cycle start date. The course will take 15-20 hours a week; it will
 cover the fundamentals of Ruby programming and will include a mix of
-solo and pair days. TAs will be available for an hour every day to
-answer questions.
+solo and pair days. TAs will be available for an hour a night
+(Monday-Thursday) to answer questions.
 
 [Course Rules][course-rules]
 
@@ -43,11 +48,12 @@ questions and provide assistance from 6pm-7pm.
 
 ### Final Assessment
 
-During the fourth and final week of App Academy Prep, we will administer
-a live assessment to each student. This assessment is designed to be as
-similar as possible to the assessments we deliver during the main
-curriculum. Your performance will not count for or against you, but you
-can expect it to paint a reliable picture of the difficulty of the
-course. If you want to prepare yourself to start App Academy on the
-right foot (and you should), then plan to re-take the assessment on your
-own until you can complete it well within the prescribed time limit.
+After going through the preparatory curriculum, students will take an
+assessment. This assessment is designed to be as similar as possible to
+the assessments we deliver during the main curriculum. Your performance
+will not count for or against you, but you can expect it to paint a
+reliable picture of the difficulty of the course. If you want to prepare
+yourself to start App Academy on the right foot (and you should), then
+plan to re-take the assessment on your own until you feel comfortable
+with the material and can complete it well within the prescribed time
+limit.
