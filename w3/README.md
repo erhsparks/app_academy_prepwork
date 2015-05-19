@@ -1,14 +1,17 @@
-## Week 3: Object Oriented Ruby II
+# Week 3: Object Oriented Ruby II
 ### Monday: Week 2 Review
-- Test First Ruby (problems 11, 14)
+- [Test First Ruby (problems 11, 14)][test-first-iii]
 
-### Tuesday (pair project): Mastermind
+[test-first-iii]: ./w3d1/
+
+### Tuesday (pair project): [Mastermind][mastermind]
+
+[mastermind]: ./w3d2/
 
 ### Wednesday: Pending
 
-### Thursday (pair project): Hangman
+### Thursday (pair project): [Hangman][hangman]
+
+[hangman]: ./w3d4/
 
 ### Friday: Pending
-
-## Week 4: Assessment 0
-- Practice Problems (pending)

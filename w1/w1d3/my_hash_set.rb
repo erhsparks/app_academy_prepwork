@@ -1,2 +1,0 @@
-class MyHashSet
-end
