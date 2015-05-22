@@ -12,17 +12,26 @@ cover the fundamentals of Ruby programming and will include a mix of
 solo and pair days. TAs will be available for an hour a night
 (Monday-Thursday) to answer questions.
 
-[Course Rules][course-rules]
+### Important Links: you MUST review all of the information covered here.
+
+* [Course Rules][course-rules]
+* [Machine Setup][machine-setup]
+* [Starting a Pairing Session][pairing-setup]
 
 [course-rules]: ./course-rules.md
+[machine-setup]: ./environment-setup.md
+[pairing-setup]: ./pairing-setup.md
 
 ## Pair Programming
 
 Roughly 1/3 of the work you will do during this stage will be done in
 the [pair programming][pair-programming] format. We use the same format
 for most of the projects in the main course, and we've had great success
-with it. Getting in the habit of pair programming effectively will
-greatly ease your transition to studying full-time at App Academy.
+with it. Developing good habits and learning to work effectively with
+your partners will greatly ease your transition to studying full-time
+at App Academy.
+
+[pair-programming]: ./pair-programming.md
 
 ## Feedback
 
@@ -30,21 +39,23 @@ During App Academy Prep, we will ask you to give feedback on your
 experience completing the project. You'll be asked to evaluate your
 performance and understanding, your partner's performance and
 understanding, and the overall pairing experience. We will collect
-similar data during the course, as well.  Your feedback helps us to
-improve the course and keep track of how people are doing with the
-material.
+similar data during the course, as well. Your feedback helps us to
+improve the course and keep track of how well people are keeping up with
+the material.
 
 ## Schedule
 
 ### Solo and Pair Projects
 
 App Academy Prep will span four weeks. During the first three weeks, you
-will be expected to do readings and complete assigned exercises and
-projects, both solo and with a partner. We expect this work to take
-about 2-3 hours for most students, and there will be assignments every
-weekday. Pair programming is scheduled to take place from 6pm-9pm PST,
-and TAs will be available on the App Academy Slack organization to take
-questions and provide assistance from 6pm-7pm.
+will be expected to do readings and complete coding exercises each
+weeknight. We expect this work to take about 2-3 hours for most students
+(or pairs). Pair programming is scheduled to take place from 6pm-9pm
+PST, and TAs will be available on the [App Academy
+Slack][app-academy-slack] organization to take questions and provide
+assistance from 6pm-7pm.
+
+[app-academy-slack]: https://app-academy.slack.com/
 
 ### Final Assessment
 
