@@ -69,3 +69,15 @@ able to pair.
 [floobits]: http://www.floobits.com/
 [sublime-text]: http://www.sublimetext.com/
 [atom-editor]: https://atom.io/
+
+## Slack
+
+Slack is a chat client similar to IRC. It supports public and private
+channels, private messages, formatted code blocks, and more. Slack is
+our go-to app for team communication, and it will be your best bet for
+chatting with classmates and getting assistance from TAs. You should
+either install the desktop client, or bookmark the web version.
+
+* [App Academy Slack Organization][aa-slack]
+
+[aa-slack]: https://app-academy.slack.com/
