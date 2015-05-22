@@ -15,7 +15,3 @@
 [hangman]: ./w3d4/
 
 ### Friday: Pending
-
-### Weekend: [Jumpstart Blogger][jumpstart-blogger]
-
-[jumpstart-blogger]: http://tutorials.jumpstartlab.com/projects/blogger.html
