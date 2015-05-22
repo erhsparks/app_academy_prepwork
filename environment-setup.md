@@ -13,9 +13,9 @@ Your operating system should have shipped with a program giving you
 access to the command line (Terminal in OS X, GNOME Terminal in Ubuntu,
 or the `cmd` prompt in Windows). You won't need to install any
 additional software to use the command line, but we do expect you to be
-familiar with basic commands. We recommend [learning the command line
-"the hard way"][cli-hardway]. Don't be scared, the tutorial isn't really
-that hard; you'll simply learn through practical examples.
+familiar with basic commands. We recommend [the "hard way"
+tutorial][cli-hardway]. Don't be scared, the tutorial isn't really that
+hard; you'll simply learn through practical examples.
 
 [cli-hardway]: http://cli.learncodethehardway.org/book/
 
@@ -27,8 +27,10 @@ We highly recommend that you use [Mac OS X][osx-ruby-install] or Linux
 for the course. If you are running one of those operating systems, you
 should be able to install Ruby with little trouble. Linux users should
 be able to follow along with the OS X install process, substituting the
-appropriate Linux commands/packages where applicable. rbenv will still
-work, so use that.
+appropriate Linux commands/packages where applicable (i.e., `sudo
+apt-get` rather than `brew`). rbenv is Linux-compatible, and it's what
+we'll use in the main course, so prefer to use it over other Ruby
+version managers.
 
 [osx-ruby-install]: http://github.com/appacademy/meta/setup/ruby.md
 
@@ -43,7 +45,7 @@ version management, and the environment will more closely resemble what
 we'll use in the full course. Simply using the Ruby installer is,
 however, easier in the short term. The approach you take is up to you,
 but you are responsible for making sure that your machine can run the
-specified version of Ruby prior to pairing sessions.
+specified Ruby version prior to pairing sessions.
 
 [virtual-machines]: http://lifehacker.com/5204434/the-beginners-guide-to-creating-virtual-machines-with-virtualbox
 [ruby-installer-windows]: http://rubyinstaller.org/
@@ -51,15 +53,16 @@ specified version of Ruby prior to pairing sessions.
 ## Text Editor
 
 For pair programming, we'll be using a collaborative online editor
-called [Floobits][floobits]. Floobits has good voice and video integration, which
-makes communicating with your partner much easier. It also has a
-built-in workspace (directory structure) for organizing your files. If
-the web editor isn't slick enough for you, it is also supported in
-[Sublime Text][sublime-text], a powerful cross-platform editor very
-similar to [Atom][atom-editor], which we use in the main course. Given
-these advantages, we feel that Floobits is the logical choice of editor
-for the pre-course. You will need to set up an account and a workspace,
-and add your partner as a collaborator before you'll be able to pair.
+called [Floobits][floobits]. Floobits has good voice and video
+integration, which makes communicating with your partner much easier. It
+also has a built-in workspace (directory structure) for organizing your
+files. If you decide that the web editor isn't your style, Floobits also
+supports [Sublime Text][sublime-text], a powerful cross-platform editor
+very similar to [Atom][atom-editor], which we use in the main course.
+Given these advantages, we feel that Floobits is the logical choice of
+editor for the pre-course. You will need to set up an account and a
+workspace, and add your partner as a collaborator before you'll be able
+to pair.
 
 [floobits]: http://www.floobits.com/
 [sublime-text]: http://www.sublimetext.com/

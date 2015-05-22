@@ -1,7 +1,4 @@
-# Pair programming
-
-Almost 80% of project time is spent in pairs; pairs are assigned by
-us each morning. Read on so that you can pair effectively!
+# Pair Programming
 
 ## How to pair
 
@@ -62,15 +59,6 @@ it wrong.
 
 **If one of you is typing away and the other is passively watching,
 you are both doing it wrong**.
-
-## Text Editor Choice
-
-Please use Atom, already installed. We can't make exceptions. We need
-both members of the pair to be comfortable using the editor. In
-general, don't use technologies a partner doesn't know; they'll just
-feel helpless.
-
-Please respect this guideline; we take it seriously :-)
 
 ## Resources
 
