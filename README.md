@@ -55,6 +55,13 @@ PST, and TAs will be available on the [App Academy
 Slack][app-academy-slack] organization to take questions and provide
 assistance from 6pm-7pm.
 
+**Note:** For pair projects, look through the readings the day before
+the project is assigned. Your partners and TAs will be very upset with
+you if you need to spend valuable pairing time on reviewing the
+readings.  On the other hand, you should also be sure NOT to do any of
+the exercises beforehand; this would make the pairing assignment rather
+boring and unproductive for both you and your partner.
+
 [app-academy-slack]: https://app-academy.slack.com/
 
 ### Final Assessment
