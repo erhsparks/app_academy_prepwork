@@ -507,7 +507,7 @@ matrix = [
   [6, 7, 8]
 ]
 
-matrix.my_tranpose
+my_tranpose(matrix)
  # => [[0, 3, 6],
  #    [1, 4, 7],
  #    [2, 5, 8]]

@@ -188,9 +188,6 @@ end
 p return_value # => [1, 2, 3]
 ```
 
-NB: you may wish to check out the [blocks](../../w1d4/blocks.md)
-section to familiarize yourself with blocks.
-
 * Write a method that finds the median of a given array of
   integers. If the array has an odd number of integers, return the
   middle item from the sorted array. If the array has an even number
