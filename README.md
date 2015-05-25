@@ -16,10 +16,12 @@ solo and pair days. TAs will be available for an hour a night
 
 * [Course Rules][course-rules]
 * [Machine Setup][machine-setup]
+* [Recommended Workflow][workflow]
 * [Starting a Pairing Session][pairing-setup]
 
 [course-rules]: ./course-rules.md
 [machine-setup]: ./environment-setup.md
+[workflow]: ./workflow.md
 [pairing-setup]: ./pairing-setup.md
 
 ## Pair Programming
