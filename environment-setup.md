@@ -58,15 +58,16 @@ Github username; this will make it easier us (and your partners) to find
 you! Floobits has good voice and video integration, which makes
 communicating with your partner much easier. It also has a built-in
 workspace feature, which gives you a directory structure for organizing
-your files. If you decide that the web editor isn't your style, Floobits
-also supports [Sublime Text][sublime-text], a powerful cross-platform
-editor very similar to [Atom][atom-editor], which we use in the main
-course.  Given these advantages, we feel that Floobits is the logical
-choice of editor for the pre-course. You will need to set up an account
-and a workspace, and add your partner as a collaborator before you'll be
-able to pair.
+your files ([here's a guide on that][floobits-setup]). If you decide
+that the web editor isn't your style, Floobits also supports [Sublime
+Text][sublime-text], a powerful cross-platform editor very similar to
+[Atom][atom-editor], which we use in the main course.  Given these
+advantages, we feel that Floobits is the logical choice of editor for
+the pre-course. You will need to set up an account and a workspace, and
+add your partner as a collaborator before you'll be able to pair.
 
 [floobits]: http://www.floobits.com/
+[floobits-setup]: ./floobits/
 [sublime-text]: http://www.sublimetext.com/
 [atom-editor]: https://atom.io/
 
