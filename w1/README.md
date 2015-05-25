@@ -16,10 +16,10 @@
 - String ([reading][string-reading] | [exercises][string-exercises])
 - Hash ([reading][hash-reading] | [exercises][hash-exercises])
 
-[string-reading]: ./w1d2/string.md
-[string-exercises]: ./w1d2/string.md#exercises
-[hash-reading]: ./w1d2/hash.md
-[hash-exercises]: ./w1d2/hash.md#exercises
+[string-reading]: ./w1d3/string.md
+[string-exercises]: ./w1d3/string.md#exercises
+[hash-reading]: ./w1d3/hash.md
+[hash-exercises]: ./w1d3/hash.md#exercises
 
 ### Thursday (pair project): [Integer#in_words][in-words]
 
