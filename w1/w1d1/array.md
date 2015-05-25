@@ -423,8 +423,6 @@ be safe to add to it? A hash?
 
 ## Exercises
 
-Estimated time: 2hrs
-
 ### Remove duplicates
 
 Array has a `uniq` method that removes duplicates from an array. It

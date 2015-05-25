@@ -143,8 +143,6 @@ capitals.has_key?('France') # => false
 
 ## Exercises
 
-Estimated time: 30min
-
 ### Set
 
 Ruby provides a class named `Set`. A set is an unordered collection of

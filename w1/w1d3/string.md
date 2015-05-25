@@ -229,8 +229,6 @@ Read up on 'em all:
 
 ## Exercises
 
-Estimated time: 1hr
-
 ### Your own `to_s` method
 
 In this exercise, you will define a method `num_to_s(num, base)`,

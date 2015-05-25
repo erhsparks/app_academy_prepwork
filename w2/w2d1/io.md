@@ -235,8 +235,6 @@ puts ARGV[0]
 
 ## Exercises
 
-Estimated time: 3hrs
-
 * Write a number guessing game. The computer should choose a number
   between 1 and 100. It should prompt the user for guesses. Each
   time, it will prompt the user for a guess; it will return too high
