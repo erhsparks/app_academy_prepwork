@@ -50,7 +50,7 @@ specified Ruby version prior to pairing sessions.
 [virtual-machines]: http://lifehacker.com/5204434/the-beginners-guide-to-creating-virtual-machines-with-virtualbox
 [ruby-installer-windows]: http://rubyinstaller.org/
 
-## Text Editor
+## Text Editor and Browser
 
 For pair programming, we'll be using a collaborative online editor
 called [Floobits][floobits]. It is probably best to register using your
@@ -63,8 +63,10 @@ that the web editor isn't your style, Floobits also supports [Sublime
 Text][sublime-text], a powerful cross-platform editor very similar to
 [Atom][atom-editor], which we use in the main course.  Given these
 advantages, we feel that Floobits is the logical choice of editor for
-the pre-course. You will need to set up an account and a workspace, and
-add your partner as a collaborator before you'll be able to pair.
+the pre-course. The only drawback is the apparent lack of support for
+Safari; however, Floobits works well in Chrome and Firefox. We use
+Chrome on all of the office workstations, so if you need to install a
+new browser for this course, that is the way to go.
 
 [floobits]: http://www.floobits.com/
 [floobits-setup]: ./floobits/
