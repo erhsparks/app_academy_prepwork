@@ -53,24 +53,15 @@ specified Ruby version prior to pairing sessions.
 ## Text Editor and Browser
 
 For pair programming, we'll be using a collaborative online editor
-called [Floobits][floobits]. It is probably best to register using your
+called [Cloud9][cloud9]. It is probably best to register using your
 Github username; this will make it easier us (and your partners) to find
-you! Floobits has good voice and video integration, which makes
+you! Cloud9 has good voice and video integration, which makes
 communicating with your partner much easier. It also has a built-in
 workspace feature, which gives you a directory structure for organizing
-your files ([here's a guide on that][floobits-setup]). If you decide
-that the web editor isn't your style, Floobits also supports [Sublime
-Text][sublime-text], a powerful cross-platform editor very similar to
-[Atom][atom-editor], which we use in the main course.  Given these
-advantages, we feel that Floobits is the logical choice of editor for
-the pre-course. The only drawback is the apparent lack of support for
-Safari; however, Floobits works well in Chrome and Firefox. We use
-Chrome on all of the office workstations, so if you need to install a
-new browser for this course, that is the way to go.
+your files ([here's a guide on that][cloud9-setup]).
 
-[floobits]: http://www.floobits.com/
-[floobits-setup]: ./floobits/
-[sublime-text]: http://www.sublimetext.com/
+[cloud9]: http://www.c9.io/
+[cloud9-setup]: ./cloud9/
 [atom-editor]: https://atom.io/
 
 ## Slack
