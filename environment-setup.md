@@ -1,76 +1,50 @@
 # Setting Up Your Programming Environment
 
 Before you start to work on the prep course material, it is important
-that you make sure that your machine is compatible with the correct
-version of Ruby, as well as the text editors we will use for the course.
-Please carefully follow the instructions in each section below to ensure
-that pair programming proceeds smoothly, with as few technical hiccups
-as possible.
+that you make sure that you have the tools to:
+* Write and run Ruby code
+* Communicate and collaborate with partners and instructional staff
 
-## The Command Line
+## Programming In the Cloud
 
-Your operating system should have shipped with a program giving you
-access to the command line (Terminal in OS X, GNOME Terminal in Ubuntu,
-or the `cmd` prompt in Windows). You won't need to install any
-additional software to use the command line, but we do expect you to be
-familiar with basic commands. We recommend [the "hard way"
-tutorial][cli-hardway]. Don't be scared, the tutorial isn't really that
-hard; you'll simply learn through practical examples.
+You can get through the App Academy Prep work using only Skype and a web
+browser. A lot of the hassle of configuration is taken care of
+automatically by the tools we use, and programming in the cloud makes it
+easy to pair program and have your code reviewed by TAs remotely.
 
+The minimum requirements are:
+* a modern web browser (we recommend [Google Chrome][chrome], but
+  [Mozilla Firefox][firefox] is also acceptable).
+* an active [Github][github] account.
+* an active [Cloud9][cloud9] account, linked with your Github account.
+* the [Skype][skype] client and an active account.
+* an active [Slack](#slack) account (don't set this up until we send you
+  an invitation to the App Academy team). You can either download the
+  Slack client or simply use their browser app.
+* basic familiarity with the [command line interface][cli-hardway].
+
+[chrome]: http://www.google.com/chrome/
+[firefox]: http://www.mozilla.org/firefox-download/
+[github]: https://github.com/
+[cloud9]: ./cloud9/
+[skype]: http://www.skype.com/
 [cli-hardway]: http://cli.learncodethehardway.org/book/
 
-## Ruby
-
-The course currently supports Ruby version 2.1.2.
-
-We highly recommend that you use [Mac OS X][osx-ruby-install] or Linux
-for the course. If you are running one of those operating systems, you
-should be able to install Ruby with little trouble. Linux users should
-be able to follow along with the OS X install process, substituting the
-appropriate Linux commands/packages where applicable (i.e., `sudo
-apt-get` rather than `brew`). rbenv is Linux-compatible, and it's what
-we'll use in the main course, so prefer to use it over other Ruby
-version managers.
-
-[osx-ruby-install]: http://github.com/appacademy/meta/setup/ruby.md
-
-If you have no choice but to work on a Windows machine, there are a
-couple options:
-
-- [Run OS X or Ubuntu on a virtual machine][virtual-machines]
-- [Install Ruby via the Ruby installer][ruby-installer-windows]
-
-A virtual machine gives much more flexibility when it comes to Ruby
-version management, and the environment will more closely resemble what
-we'll use in the full course. Simply using the Ruby installer is,
-however, easier in the short term. The approach you take is up to you,
-but you are responsible for making sure that your machine can run the
-specified Ruby version prior to pairing sessions.
-
-[virtual-machines]: http://lifehacker.com/5204434/the-beginners-guide-to-creating-virtual-machines-with-virtualbox
-[ruby-installer-windows]: http://rubyinstaller.org/
-
-## Text Editor and Browser
-
-For pair programming, we'll be using a collaborative online editor
-called [Cloud9][cloud9]. It is probably best to register using your
-Github username; this will make it easier us (and your partners) to find
-you! Cloud9 has good voice and video integration, which makes
-communicating with your partner much easier. It also has a built-in
-workspace feature, which gives you a directory structure for organizing
-your files ([here's a guide on that][cloud9-setup]).
-
-[cloud9]: http://www.c9.io/
-[cloud9-setup]: ./cloud9/
-[atom-editor]: https://atom.io/
-
-## Slack
+### Slack
 
 Slack is a chat client similar to IRC. It supports public and private
-channels, private messages, formatted code blocks, and more. Slack is
+channels, direct messages, formatted code blocks, and more. Slack is
 our go-to app for team communication, and it will be your best bet for
 chatting with classmates and getting assistance from TAs. You should
-either install the desktop client, or bookmark the web version.
+either install the desktop client, or bookmark the web version. You can
+type `code snippets` by surrounding text in \`backticks\`. You can also
+open and close multi-line code blocks like this:
+
+```
+\`\`\`
+# your code goes here
+\`\`\`
+```
 
 * [App Academy Slack Organization][aa-slack]
 
