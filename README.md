@@ -77,3 +77,10 @@ yourself to start App Academy on the right foot (and you should), then
 plan to re-take the assessment on your own until you feel comfortable
 with the material and can complete it well within the prescribed time
 limit.
+
+### Additional Resources
+
+* [Ruby style guide][ruby-styleguide]
+
+[ruby-styleguide]: https://github.com/styleguide/ruby
+

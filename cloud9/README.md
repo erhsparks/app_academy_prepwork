@@ -5,6 +5,8 @@ during App Academy Prep. It has many of the same features as more
 powerful desktop editors like Sublime Text or Atom, along with a
 built-in terminal and robust support for collaboration.
 
+[cloud9]: https://c9.io/
+
 ### Registration
 
 We encourage you to register for Cloud9 with your Github account. This
