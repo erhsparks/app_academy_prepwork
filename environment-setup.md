@@ -40,11 +40,9 @@ either install the desktop client, or bookmark the web version. You can
 type `code snippets` by surrounding text in \`backticks\`. You can also
 open and close multi-line code blocks like this:
 
-```
-\`\`\`
-# your code goes here
-\`\`\`
-```
+    ```
+    # your code goes here
+    ```
 
 * [App Academy Slack Organization][aa-slack]
 
