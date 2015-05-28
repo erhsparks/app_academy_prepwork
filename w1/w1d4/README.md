@@ -3,6 +3,8 @@
 **Note:** Please review the [pairing setup][pairing-setup] guide if you
 need a refresher on setting up your pairing session.
 
+[pairing-setup]: ../../pairing-setup.md
+
 ### Automated Testing
 
 Today's material comes from a Ruby tutorial called [Test-First
