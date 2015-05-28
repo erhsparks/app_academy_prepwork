@@ -20,9 +20,10 @@ through the project.
 ### Getting Started
 
 Download the [zip][w1d4-zip] containing the day's exercises. Extract it
-to a directory in your workspace and navigate there in your terminal
-(for example, `cd ~/my_workspace/w1d4`). You'll find a few things in the
-directory:
+to a directory on your computer and upload the folder to your Cloud9
+workspace (you can do this by selecting **File > Upload Files** from the
+Cloud9 menu toolbar). Navigate to the directory in your terminal. There
+you'll find a few things:
 
 - a `Gemfile`: this specifies the gem versions we'll be using in our
   project. We can manage gem versions with the `bundler` gem (more
