@@ -33,4 +33,6 @@
 ### Weekend: Writing Good Code (links pending)
 - Refactoring and Code Smells (video reading)
 - Ruby Style Guide
-- Debugging (video lecture)
+- Debugging ([video lecture][debugging_video])
+
+[debugging_video]: https://vimeo.com/129370279
