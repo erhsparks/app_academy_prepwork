@@ -31,8 +31,10 @@
 [test-first-i]: ./w1d5/
 
 ### Weekend: Writing Good Code (links pending)
-- Refactoring and Code Smells (video reading)
-- Ruby Style Guide
+- Refactoring and Code Smells ([video lecture][refactoring-video])
+- [Ruby Style Guide][ruby-styleguide]
 - Debugging ([video lecture][debugging_video])
 
+[refactoring-video]: https://www.youtube.com/watch?v=DC-pQPq0acs
+[ruby-styleguide]: https://github.com/styleguide/ruby
 [debugging_video]: https://vimeo.com/129370279
