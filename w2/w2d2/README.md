@@ -18,7 +18,8 @@ the command line, in which case it opens and reads that file:
 5 2 + 4 *
 
 # command prompt
-ruby 12_rpn_calculator.rb calculator_instructions.txt
+~$ ruby 12_rpn_calculator.rb calculator_instructions.txt
+28 #=> printed result
 ```
 
 If no filename argument is passed, it should have a user interface that
@@ -27,14 +28,14 @@ hits `enter` with no operand, the calculator should run and output its
 result.
 
 ```
-ruby 12_rpn_calculator.rb
-> 5
-> 2
-> +
-> 4
-> *
->
-> 28 #=> printed result, program ends
+~$ ruby 12_rpn_calculator.rb
+5
+2
++
+4
+*
+
+28 #=> printed result, program ends
 ```
 
 **BONUS**: Write specs for the I/O functionality of your new and
