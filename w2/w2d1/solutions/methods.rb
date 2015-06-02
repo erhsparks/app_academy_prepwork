@@ -52,7 +52,7 @@ def remix(drinks)
   alcohols = drinks.map(&:first)
   mixers = drinks.map(&:last)
 
-  alcohols.shuffle!
+  # We only need to shuffle one component for the new combinations to be random.
   mixers.shuffle!
 
   new_drinks = []
@@ -60,4 +60,24 @@ def remix(drinks)
     new_drinks << [alcohols[i], mixers[i]]
   end
   new_drinks
+end
+
+# Bonus solution; with this approach, we re-shuffle if any of the new
+# drinks were in the original set.
+def remix(drinks)
+  new_drinks = drinks
+
+  until new_drinks.none? { |drink| drinks.include?(drink) }
+    new_drinks = remix_helper(drinks)
+  end
+
+  new_drinks
+end
+
+def remix_helper(drinks)
+  # Does the same thing as the original `remix` solution above
+  alcohols = drinks.map(&:first)
+  mixers = drinks.map(&:last)
+
+  alcohols.zip(mixers.shuffle)
 end
