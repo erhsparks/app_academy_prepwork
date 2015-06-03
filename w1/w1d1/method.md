@@ -23,10 +23,10 @@ methods you've probably already used.
 
 When a method is called, the code inside of its body is run, and the
 method's **return value**, if any, is passed back to the code that
-called the function. In Ruby, **every method has a return value**. Sometimes, the return
-value is meaningful, and sometimes it isn't (often the return value is
-`nil` in this case). Let's take a look at a few examples to see how
-this plays out:
+called the function. In Ruby, **every method has a return value**.
+Sometimes, the return value is meaningful, and sometimes it isn't (often
+the return value is `nil` in this case). Let's take a look at a few
+examples to see how this plays out:
 
 Here's an example of a method that returns the square of a
 number:
