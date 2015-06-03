@@ -90,6 +90,49 @@ appacademy-prep/
 
 ### Pair Programming in Cloud9
 
-Please see our [pairing setup][pairing-setup] guide!
+First and foremost, please see our [pairing setup][pairing-setup] guide!
 
 [pairing-setup]: ../pairing-setup.md
+
+In addition, there are a couple "quirks" to the Cloud9 editor that are
+good to be aware of.
+
+### Sharing a Terminal
+If you've used a Cloud9 workspace on your own before, you're probably
+familiar with the default window arrangement:
+
+![The default window arrangement](images/terminal_default.png)
+
+The terminal sits at the bottom, and you can use it just like you would
+use the terminal on your own machine. You can enter commands, scroll up
+and down through the history, and so forth. If you'd like, you can also
+choose a different layout from the list under **View > Layout**. The
+"Horizontal Split" option looks like this:
+
+![Terminal in a horizontal split](images/terminal_split.png)
+
+This gives you some more room vertically, so it's easier to look through
+the terminal's history at a glance. Let's say we start using this layout
+and invite a friend into our workspace. In this case, something
+interesting happens:
+
+![Shared terminal in a horizontal split](images/terminal_shared.png)
+
+What's going on here? You'll notice that part of the terminal has been
+grayed out. In the "shared" mode, only one user has full control over
+the terminal. We'll call this user the host. To the host user, the
+terminal appears and behaves normally: it can be resized, scrolled
+through, and so forth. Guest users can still enter text and run commands
+in the terminal, but they get a restricted view: the active area of
+their terminal is restricted to the visible area of the host's terminal;
+the rest of the window is disabled (grayed out). Guests also can't
+scroll through the terminal's history.
+
+How can we deal with this? There are two options.
+
+1. Have both users use the Horizontal Split layout, to maximize the
+   visible area of the terminal on both screens.
+2. Have each user run commands in their own terminal window. This is
+   not ideal, since we want both partners to be looking at the same
+   thing; however, it does help to avoid the shared terminal's wonky
+   behavior.
