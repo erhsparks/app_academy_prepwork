@@ -30,3 +30,11 @@
 [iteration-exercises]: ./w2d5/iteration.md#exercises
 [symbols-options-hashes-reading]: ./w2d5/symbols-options-hashes.md
 [symbols-options-hashes-exercises]: ./w2d5/symbols-options-hashes.md#exercises
+
+### Bonus
+
+- [CodeEval][code-eval] problems (requires git login)
+- [Project Euler][project-euler] problems
+
+[code-eval]: http://www.codeeval.com/
+[project-euler]: http://projecteuler.net/

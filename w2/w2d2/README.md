@@ -38,5 +38,7 @@ result.
 28 #=> printed result, program ends
 ```
 
-**BONUS**: Write specs for the I/O functionality of your new and
-improved RPN calculator.
+**BONUS**: If you finish early, try some of the week's [bonus
+problems][w2-bonus].
+
+[w2-bonus]: ../#bonus
