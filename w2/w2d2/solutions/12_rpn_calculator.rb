@@ -1,22 +1,64 @@
-#!/usr/bin/env ruby
-
-# The top line tells the shell that this should be runnable as a Ruby
-# script. So I should be able to run `./rpn.rb` (after setting the
-# file to "executable" by `chmod +x rpn.rb`).
-
 class RPNCalculator
+  OPERATORS = [:+, :-, :*, :/]
+
+  def self.evaluate_file(file)
+    file.each do |line|
+      line = line.chomp
+      calc = RPNCalculator.new
+      puts calc.evaluate(line)
+    end
+  end
+
+  def self.prompt
+    puts "Enter a number or operator (ENTER to quit)"
+    print "> "
+  end
+
+  def self.run_ui
+    calc = RPNCalculator.new
+    string = ""
+
+    loop do
+      prompt
+      input = gets.chomp
+      break if input.empty? # Stop asking for input if the user hits ENTER
+      string << " #{input}"
+    end
+
+    puts calc.evaluate(string)
+  end
+
   def initialize
     @stack = []
   end
 
-  def push(num)
-    @stack << num
+  def divide
+    perform_op(:/)
+  end
 
-    self
+  def evaluate(string)
+    tokens(string).each do |token|
+      case token
+      when Integer
+        push(token)
+      when Symbol
+        perform_op(token)
+      end
+    end
+
+    value
+  end
+
+  def minus
+    perform_op(:-)
+  end
+
+  def operator?(char)
+    OPERATORS.include?(char.to_sym)
   end
 
   def perform_op(op_sym)
-    raise RuntimeError.new("Too few operands!") unless @stack.count >= 2
+    raise "calculator is empty" unless @stack.count >= 2
 
     right_operand = @stack.pop
     left_operand = @stack.pop
@@ -39,36 +81,25 @@ class RPNCalculator
     self
   end
 
-  def extract_value
-    case @stack.count
-    when 0
-      raise RuntimeError.new("There are still no operands in the stack.")
-    when 1
-      @stack.pop
-    else
-      raise RuntimeError.new("There are still #{@stack.count} operands left.")
-    end
+  def plus
+    perform_op(:+)
   end
 
-  def self.evaluate_file(file)
-    calc = RPNCalculator.new
-    ops = ["+", "-", "*", "/"]
+  def push(num)
+    @stack << num
+  end
 
-    file.each do |line|
-      line = line.chomp
+  def times
+    perform_op(:*)
+  end
 
-      if ops.include?(line)
-        calc.perform_op(line.to_sym)
-      elsif line =~ /\A[0-9]+\z/
-        calc.push(line.to_i)
-      else
-        # Break out of loop as $stdin goes on forever.
-        # This lets us quit by submitting any invalid character.
-        break
-      end
-    end
+  def tokens(string)
+    chars = string.split(" ")
+    chars.map { |char| operator?(char) ? char.to_sym : Integer(char) }
+  end
 
-    calc.extract_value
+  def value
+    @stack.last
   end
 end
 
@@ -77,7 +108,7 @@ if __FILE__ == $PROGRAM_NAME
   if ARGV.empty?
     # if no file given, read input from the standard input (console)
     # file
-    puts RPNCalculator.evaluate_file($stdin)
+    RPNCalculator.run_ui
   else
     File.open(ARGV[0]) do |file|
       puts RPNCalculator.evaluate_file(file)
