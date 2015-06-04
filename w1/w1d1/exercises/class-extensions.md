@@ -96,6 +96,21 @@ Don't use the built-in `transpose` method!
 
 [caesar-cipher]: http://en.wikipedia.org/wiki/Caesar_cipher
 
+## Hash
+
+### Difference
+
+Write a method, `Hash#difference(other_hash)`. Your method should return
+a new hash containing only the keys that appear in one or the other of
+the hashes (but not both!) Thus:
+
+```ruby
+hash_one = { a: "alpha", b: "beta" }
+hash_two = { b: "bravo", c: "charlie" }
+hash_one.difference(hash_two)
+ # => { a: "alpha", c: "charlie" }
+```
+
 ## Fixnum
 
 ### Stringify
