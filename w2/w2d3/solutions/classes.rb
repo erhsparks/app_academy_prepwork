@@ -20,10 +20,13 @@ class Student
   end
 
   def course_load
-    load = Hash.new(0)
+    load_hash = Hash.new(0)
+
     self.courses.each do |course|
-      load[course.department] += course.num_credits
+      load_hash[course.department] += course.num_credits
     end
+
+    load_hash
   end
 
   def has_conflict?(new_course)
