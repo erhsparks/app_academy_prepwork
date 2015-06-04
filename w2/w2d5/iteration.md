@@ -367,10 +367,11 @@ swapping values.
       file.
     * Learn how to read a file [here][opening-a-file].
     * You may need to use `String#chomp` to strip newline characters;
-      see the [Input/Output](./io.md) chapter for details.
+      see the [Input/Output][io] chapter for details.
 
-[dictionary-file]: ../projects/dictionary.txt
-[opening-a-file]: ./io.md#opening-a-file
+[dictionary-file]: ./dictionary.txt
+[io]: ../w2d1/io.md
+[opening-a-file]: ../w2d1/io.md#opening-a-file
 
 ## Resources
 
