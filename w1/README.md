@@ -11,7 +11,7 @@
 
 [methods]: ./w1d1/readings/method.md
 [objects]: ./w1d1/readings/object.md
-[classes]: ./w1d1/readings/classes.md
+[classes]: ./w1d1/readings/class.md
 [arrays]: ./w1d1/readings/array.md
 [strings]: ./w1d1/readings/string.md
 [hashes]: ./w1d1/readings/hash.md
