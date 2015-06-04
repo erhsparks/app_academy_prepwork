@@ -21,9 +21,16 @@
 
 [class-extensions]: ./w1d1/exercises/class-extensions.md
 
-### Tuesday (pair project): [Towers of Hanoi][towers-of-hanoi]
+### Tuesday: Blocks and Iteration
 
-[towers-of-hanoi]: ./w1d2/
+#### Readings
+- [Iteration][iteration]
+- [Enumerables][enumerables]
+- [Blocks][blocks]
+
+[iteration]: ./w1d2/readings/iteration.md
+[enumerables]: ./w1d2/readings/enumerable.md
+[blocks]: ./w1d2/readings/block.md
 
 ### Wednesday: Strings and Hashes
 - String ([reading][string-reading] | [exercises][string-exercises])
