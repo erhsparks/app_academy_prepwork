@@ -96,6 +96,65 @@ Don't use the built-in `transpose` method!
 
 [caesar-cipher]: http://en.wikipedia.org/wiki/Caesar_cipher
 
+## Fixnum
+
+### Stringify
+
+In this exercise, you will define a method `Fixnum#stringify(base)`,
+which will return a string representing the original integer in a
+different base (up to base 16). **Do not use the built-in
+`#to_s(base)`**.
+
+To refresh your memory, a few common base systems:
+
+|Base 10 (decimal)     |0|1|2|3|...|9|10|11|12|13|14|15
+|----------------------|---|---|---|---|---|---|---|---|---|---|---|---|
+|Base 2 (binary)       |0|1|10|11|...|1001|1010|1011|1100|1101|1110|1111|
+|Base 16 (hexadecimal) |0|1|2|3|...|9|A|B|C|D|E|F|
+
+Examples of strings your method should produce:
+
+```ruby
+5.stringify(10) #=> "5"
+5.stringify(2)  #=> "101"
+5.stringify(16) #=> "5"
+
+234.stringify(10) #=> "234"
+234.stringify(2)  #=> "11101010"
+234.stringify(16) #=> "EA"
+```
+
+Here's a more concrete example of how your method might arrive at the
+conversions above:
+
+```ruby
+234.stringify(10) #=> "234"
+(234 / 1)   % 10  #=> 4
+(234 / 10)  % 10  #=> 3
+(234 / 100) % 10  #=> 2
+                      ^
+
+234.stringify(2) #=> "11101010"
+(234 / 1)   % 2  #=> 0
+(234 / 2)   % 2  #=> 1
+(234 / 4)   % 2  #=> 0
+(234 / 8)   % 2  #=> 1
+(234 / 16)  % 2  #=> 0
+(234 / 32)  % 2  #=> 1
+(234 / 64)  % 2  #=> 1
+(234 / 128) % 2  #=> 1
+                     ^
+```
+
+The general idea is to each time divide by a greater power of `base`
+and then mod the result by `base` to get the next digit. Continue until
+`num / (base ** pow) == 0`.
+
+You'll get each digit as a number; you need to turn it into a
+character. Make a `Hash` where the keys are digit numbers (up to and
+including 15) and the values are the characters to use (up to and
+including `F`).
+
 ## Bonus
 
 - Refactor your `Array#my_transpose` method to work with any rectangular
