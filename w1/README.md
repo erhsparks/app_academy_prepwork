@@ -1,12 +1,25 @@
 # Week 1: Ruby Refresher
-### Monday: Arrays and Enumerables
-- Array ([reading][array-reading] | [exercises][array-exercises])
-- Enumerable ([reading][enumerable-reading] | [exercises][enumerable-exercises])
+### Monday: Classes and Objects
 
-[array-reading]: ./w1d1/array.md
-[array-exercises]: ./w1d1/array.md#exercises
-[enumerable-reading]: ./w1d1/enumerable.md
-[enumerable-exercises]: ./w1d1/enumerable.md#exercises
+#### Readings
+- [Methods][methods]
+- [Objects][objects]
+- [Classes][classes]
+- [Arrays][arrays]
+- [Strings][strings]
+- [Hashes][hashes]
+
+[methods]: ./w1d1/readings/method.md
+[objects]: ./w1d1/readings/object.md
+[classes]: ./w1d1/readings/classes.md
+[arrays]: ./w1d1/readings/array.md
+[strings]: ./w1d1/readings/string.md
+[hashes]: ./w1d1/readings/hash.md
+
+#### Exercises
+- [Class Extensions][class-extensions]
+
+[class-extensions]: ./w1d1/exercises/class-extensions.md
 
 ### Tuesday (pair project): [Towers of Hanoi][towers-of-hanoi]
 

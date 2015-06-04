@@ -66,9 +66,9 @@ to the `num` argument declared between the pipes.
 
 ## Writing a method that takes a block
 
-Blocks are passed to methods mostly like other arguments. Let's write
-a method, `maybe` that will call a block only if its argument is
-true. It should work like this:
+Blocks are passed to methods mostly like other arguments. Let's write a
+method, `maybe` that will call a block only if its argument is true. It
+should work like this:
 
 ```ruby
 maybe(true) { puts "Hello!" } # runs block, since passed true
@@ -173,8 +173,8 @@ add_one = Proc.new { |num| num + 1 } # num + 1 will be returned
 two = add_one.call(1)
 ```
 
-This is how `Enumerable#map` works: it calls the block on each
-element, using the returned value in the new collection.
+This is how `Enumerable#map` works: it calls the block on each element,
+using the returned value in the new collection.
 
 Do not explicitly `return` from a block:
 
@@ -186,8 +186,8 @@ This will not merely return from the block, it will return from the
 context where the block was defined. Huh? What does that mean?
 
 The reason is not vital for you to know right now (so long as you know
-not to use return in blocks!). You can skip the following if you
-like; if you are curious, you read on.
+not to use return in blocks!). You can skip the following if you like;
+if you are curious, you read on.
 
 ```ruby
 def wrap_block(&prc)
@@ -233,23 +233,23 @@ Tricky, tricky, tricky. We might have thought we could return from the
 block as if we were in a new, anonymous method. Under this theory,
 return would return just from the block.
 
-This is not what a block does, though; as said, it will return from
-the context where it was first defined. In example two, this results
-in the unexpected behavior. In the third example, the block is defined
-at the top level, where it is illegal to return. So this causes an
-exception to be thrown.
+This is not what a block does, though; as said, it will return from the
+context where it was first defined. In example two, this results in the
+unexpected behavior. In the third example, the block is defined at the
+top level, where it is illegal to return. So this causes an exception to
+be thrown.
 
 When I learned Ruby, I was surprised by this behavior. I was used to
 other languages (like Lisp and JavaScript) which led me to believe
-return would only return from the block. Ruby does have a way to do
-this (lambdas), but they are not as commonly used as blocks.
+return would only return from the block. Ruby does have a way to do this
+(lambdas), but they are not as commonly used as blocks.
 
 As you grow wise with age, you may learn to recognize times where it
 might be convenient to return from a block and take advantage of this
 feature. For myself, I don't do this, since it is somewhat unexpected
 (by me, anyway). So even when it might be otherwise convenient, I want
-to be sure not to confuse another reader (or myself!) when someone
-comes back to my code.
+to be sure not to confuse another reader (or myself!) when someone comes
+back to my code.
 
 ## Symbols and blocks
 
@@ -269,11 +269,11 @@ the `&` symbol again:
 [1, 2, 3].map(&add_one) # => [2, 3, 4]
 ```
 
-Notice how this is kind of the flip-side of using `&` in the
-definition of a method.
+Notice how this is kind of the flip-side of using `&` in the definition
+of a method.
 
-Of course, we get yelled at if we try to pass both a `Proc` this way
-in addition to a typical block:
+Of course, we get yelled at if we try to pass both a `Proc` this way in
+addition to a typical block:
 
 ```ruby
 [6] pry(main)> [1, 2, 3].map(&add_one) { "an actual block!" }
@@ -295,24 +295,24 @@ In this case, Ruby gives us a shortcut:
 [1, 2, 5].select(&:odd?)
 ```
 
-What's happening here? Using the `&` symbol calls `#to_proc` on the
-item following the ampersand. For example, in the above code,
+What's happening here? Using the `&` symbol calls `#to_proc` on the item
+following the ampersand. For example, in the above code,
 [`#to_proc`][symbol-to-proc] is called on the symbols `:upcase` and
 `:odd`.
 
 [symbol-to-proc]: http://ruby-doc.org/core-2.1.2/Symbol.html#method-i-to_proc
 
-When `#to_proc` is called on a symbol, we get back a `Proc` object
-that just calls a method with the same name as the symbol on its
-argument. Here's what the above is "actually doing".
+When `#to_proc` is called on a symbol, we get back a `Proc` object that
+just calls a method with the same name as the symbol on its argument.
+Here's what the above is "actually doing".
 
 ```ruby
 ["a", "b", "c"].map { |s| s.upcase }
 [1, 2, 5].select { |i| i.odd? }
 ```
 
-Here's an example of converting a `Symbol` into a `Proc`. Notice that
-we can call *the same Proc* on different data structures:
+Here's an example of converting a `Symbol` into a `Proc`. Notice that we
+can call *the same Proc* on different data structures:
 
 ```ruby
 class Array
@@ -383,35 +383,19 @@ proc back into a block.
 
 ## Exercises
 
-Estimated time: 1hrs
+### `benchmark`
 
-* Implement new `Array` methods `my_each`, `my_map`, `my_select`. Do
-  it by monkey-patching the `Array` class. Don't use any of the
-  original versions when writing these. Use your `my_each` to define
-  the others. Remember that `each`/`map`/`select` do not modify the
-  original array.
-* Implement a `my_inject` method. Your version shouldn't take an
-  optional starting argument; just use the first element. Ruby's
-  `inject` is fancy (you can write `[1, 2, 3].inject(:+)` to shorten
-  up `[1, 2, 3].inject { |sum, num| sum + num }`), but do the block
-  (and not the symbol) version. Again, use your `my_each` to define
-  `my_inject`. Again, do not modify the original array.
-* Define your own `Array#my_sort!` (you don't need `my_each`
-  anymore). It should take in a block to perform the comparison:
+Write a `benchmark` method that takes a block. It should run the block,
+and return the amount of time (in seconds) it took to run the block. You
+can do this using Ruby's `Time.now` and subtraction. Once you have this
+basic functionality by adding an optional argument, allowing the user to
+specify how many times the block should be run.
 
-  ```ruby
-  [1, 3, 5].my_sort! { |num1, num2| num1 <=> num2 } #sort ascending
-  [1, 3, 5].my_sort! { |num1, num2| num2 <=> num1 } #sort descending
-  ```
+### `race`
 
-  `#<=>` (the **spaceship** method)
-  [compares objects][so-spaceship]. `x.<=>(y)` returns `-1` if `x` is
-  less than `y`. If `x` and `y` are equal, it returns `0`. If greater,
-  `1`. You can define `<=>` on your own classes.
-
-  Your `my_sort!` should modify the array. After writing `my_sort!`,
-  write a `my_sort` that does the same but doesn't modify the
-  original. Do this in two lines using `dup`.
+Now write a `race` method that takes two procs and returns the one with
+the shorter runtime. Use your `benchmark` method to do this. Here, too,
+allow the user to pass in the number of times to run the procs.
 
 ### `eval_block`
 

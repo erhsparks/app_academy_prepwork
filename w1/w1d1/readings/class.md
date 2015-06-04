@@ -1,4 +1,4 @@
-# Class (Part I)
+# Classes
 
 ## Goals
 - Know that a class is a blueprint for an object.
