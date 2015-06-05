@@ -39,8 +39,8 @@ my_neat_method(*my_arg_array)
 ```
 
 In the example above, `my_neat_method` gets the arguments in **exactly**
-the same way in both `ex1` and `ex2`. It has **no_idea** the arguments
-were **ever** in `my_arg_array`.  The splat operator passed in the
+the same way in both `ex1` and `ex2`. It has **no idea** the arguments
+were **ever** in `my_arg_array`. The splat operator passed in the
 individual arguments as separate, distinct, discrete, un-array-ified
 arguments.
 
@@ -67,12 +67,14 @@ eval_block(1, 2, 3)
 
 ## Iteration
 
-* Write a method `factors` that prints out all the factors of a given
-  number.
+### Factors
+
+Write a method `factors(num)` that prints out all the factors of a given
+number.
 
 ### Bubble Sort
 
-Implement [Bubble sort][wiki-bubble-sort] in a method
+Implement [Bubble sort][wiki-bubble-sort] in a method,
 `Array#bubble_sort!`. Your method should modify the array so that it is
 in sorted order.
 
@@ -102,41 +104,39 @@ comparison:
 [1, 3, 5].bubble_sort! { |num1, num2| num2 <=> num1 } #sort descending
 ```
 
-`#<=>` (the **spaceship** method)
+#### `#<=>` (the **spaceship** method)
 [compares objects][so-spaceship]. `x.<=>(y)` returns `-1` if `x` is
 less than `y`. If `x` and `y` are equal, it returns `0`. If greater,
-`1`. You can define `<=>` on your own classes.
+`1`. For future reference, you can define `<=>` on your own classes.
 
 [wiki-bubble-sort]: http://en.wikipedia.org/wiki/bubble_sort
 [parallel-assignment]: http://rubyquicktips.com/post/384502538/easily-swap-two-variables-values
 [so-spaceship]: http://stackoverflow.com/questions/827649/what-is-the-ruby-spaceship-operator
 
-* Write a method `substrings` that will take a `String` and return an
-  array containing each of its substrings. Don't repeat substrings.
-  Example output: `substrings("cat") =>
-  ["c", "ca", "cat", "a", "at", "t"]`.
-* Your `substrings` method returns many strings that are not true
-  English words. Let's write a new method, `subwords` which will call
-  `substrings`, but then filter it and return just the English words.
-    * To do this, we'll need a dictionary, you can download one
-      [here][dictionary-file]. Click the 'Raw' button, and then save the
-      file.
-    * Learn how to read a file [here][opening-a-file].
-    * You may need to use `String#chomp` to strip newline characters;
-      see the [Input/Output](./io.md) chapter for details.
+### Substrings and Subwords
 
-[dictionary-file]: ../projects/dictionary.txt
-[opening-a-file]: ./io.md#opening-a-file
+Write a method, `substrings`, that will take a `String` and return an
+array containing each of its substrings. Don't repeat substrings.
+Example output: `substrings("cat") => ["c", "ca", "cat", "a", "at",
+"t"]`.
 
-## Enumerable
+Your `substrings` method returns many strings that are not true English
+words. Let's write a new method, `subwords`, which will call
+`substrings`, filtering it to return only valid words. To do this,
+`subwords` will accept both a string and a dictionary (an array of
+words).
 
-* Write a method that takes an array of integers and returns an array
-  with the array elements multiplied by two.
+## Enumerables
 
-* Extend the Array class to include a method named `my_each` that
-  takes a block, calls the block on every element of the array, and
-  then returns the original array. Do not use Ruby's Enumerable's
-  `each` method. I want to be able to write:
+### Doubler
+Write a `doubler` method that takes an array of integers and returns an
+array with the original elements multiplied by two.
+
+### My Each
+Extend the Array class to include a method named `my_each` that takes a
+block, calls the block on every element of the array, and then returns
+the original array. Do not use Enumerable's `each` method. I want to be
+able to write:
 
 ```ruby
 # calls my_each twice on the array, printing all the numbers twice.
@@ -155,11 +155,12 @@ end
 p return_value # => [1, 2, 3]
 ```
 
+### My Enumerable Methods
 * Implement new `Array` methods `my_map` and `my_select`. Do
   it by monkey-patching the `Array` class. Don't use any of the
-  original versions when writing these. Use your `my_each` to define
-  the others. Remember that `each`/`map`/`select` do not modify the
-  original array.
+  original versions when writing these. Use your `my_each` method to
+  define the others. Remember that `each`/`map`/`select` do not modify
+  the original array.
 * Implement a `my_inject` method. Your version shouldn't take an
   optional starting argument; just use the first element. Ruby's
   `inject` is fancy (you can write `[1, 2, 3].inject(:+)` to shorten
@@ -167,15 +168,9 @@ p return_value # => [1, 2, 3]
   (and not the symbol) version. Again, use your `my_each` to define
   `my_inject`. Again, do not modify the original array.
 
-* Write a method that finds the median of a given array of
-  integers. If the array has an odd number of integers, return the
-  middle item from the sorted array. If the array has an even number
-  of integers, return the average of the middle two items from the
-  sorted array. (You actually don't need to use any enumerable methods
-  for this).
-
-* Create a method that takes in an `Array` of `String`s and uses
-  `inject` to return the concatenation of the strings.
+### Concatenate
+Create a method that takes in an `Array` of `String`s and uses `inject`
+to return the concatenation of the strings.
 
 ```ruby
 concatenate(["Yay ", "for ", "strings!"])
