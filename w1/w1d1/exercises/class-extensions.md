@@ -3,7 +3,6 @@
 ## Array
 
 ### Finding Uniques
-
 Monkey-patch the Array class with your own `uniq` method, called
 `my_uniq`. The method should return the unique elements, in the order
 they first appeared:
@@ -15,7 +14,6 @@ they first appeared:
 Do not use the built-in `uniq` method!
 
 ### Two Sum
-
 Write a new `Array#two_sum` method that finds all pairs of positions
 where the elements at those positions sum to zero.
 
@@ -30,8 +28,13 @@ index before bigger index. I want the array of pairs to be sorted
 * `[0, 2]` before `[1, 2]` (smaller first elements come first)
 * `[0, 1]` before `[0, 2]` (then smaller second elements come first)
 
-### My Transpose
+### Median
+Write a method that finds the median of a given array of integers. If
+the array has an odd number of integers, return the middle item from the
+sorted array. If the array has an even number of integers, return the
+average of the middle two items from the sorted array.
 
+### My Transpose
 To represent a *matrix*, or two-dimensional grid of numbers, we can
 write an array containing arrays which represent rows:
 
@@ -80,7 +83,6 @@ Don't use the built-in `transpose` method!
 ## String
 
 ### Caesar cipher
-
 * Implement a [Caesar cipher][caesar-cipher]. Example:
   `"hello".caesar(3) # => "khoor"`
 * Assume the text is all lower case letters.
@@ -99,7 +101,6 @@ Don't use the built-in `transpose` method!
 ## Hash
 
 ### Difference
-
 Write a method, `Hash#difference(other_hash)`. Your method should return
 a new hash containing only the keys that appear in one or the other of
 the hashes (but not both!) Thus:
@@ -114,7 +115,6 @@ hash_one.difference(hash_two)
 ## Fixnum
 
 ### Stringify
-
 In this exercise, you will define a method `Fixnum#stringify(base)`,
 which will return a string representing the original integer in a
 different base (up to base 16). **Do not use the built-in
