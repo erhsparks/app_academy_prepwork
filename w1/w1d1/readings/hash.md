@@ -130,9 +130,9 @@ capitals = { 'New York' => 'Albany', 'California' => 'Sacramento' }
 capitals.values # => ['Albany', 'Sacramento']
 ```
 
-### `Hash#has_key?`
+### `Hash#key?`
 
-We can check if a hash has a specific key by using the `Hash#has_key?`
+We can check if a hash has a specific key by using the `Hash#key?`
 method:
 
 ```ruby
