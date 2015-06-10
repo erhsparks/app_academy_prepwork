@@ -8,7 +8,9 @@
 
 [mastermind]: ./w3d2/
 
-### Wednesday: Pending
+### Wednesday: [Battleship][battleship]
+
+[battleship]: ./w3d3/
 
 ### Thursday (pair project): [Hangman][hangman]
 
