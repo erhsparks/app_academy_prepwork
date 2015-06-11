@@ -1,5 +1,3 @@
-require 'byebug'
-
 class BattleshipGame
   def initialize
     @player = HumanPlayer.new
@@ -25,12 +23,15 @@ class BattleshipGame
     puts "Congratulations. You win!"
   end
 
-  def game_over?
-    board.won?
+  def display_status
+    system("clear")
+    board.display
+    puts "It's a hit!" if hit?
+    puts "There are #{count} ships remaining."
   end
 
-  def get_play
-    gets.chomp.split(",").map { |el| Integer(el) }
+  def game_over?
+    board.won?
   end
 
   def hit?
@@ -46,20 +47,11 @@ class BattleshipGame
     pos = nil
 
     until valid_play?(pos)
-      prompt
-      pos = get_play
+      display_status
+      pos = player.get_play
     end
 
     attack(pos)
-  end
-
-  def prompt
-    system("clear")
-    board.display
-    puts "It's a hit!" if hit?
-    puts "There are #{count} ships remaining."
-    puts "Please enter a target square (i.e., '3,4')"
-    print "> "
   end
 
   def valid_play?(pos)
@@ -155,6 +147,18 @@ class Board
 end
 
 class HumanPlayer
+  def initialize(name)
+    @name = name
+  end
+
+  def get_play
+    gets.chomp.split(",").map { |el| Integer(el) }
+  end
+
+  def prompt
+    puts "Please enter a target square (i.e., '3,4')"
+    print "> "
+  end
 end
 
 if __FILE__ == $PROGRAM_NAME
