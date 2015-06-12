@@ -16,4 +16,6 @@
 
 [hangman]: ./w3d4/
 
-### Friday: Pending
+### Friday: Refactor your old projects and try the [Maze Solver][maze-solver] as a bonus.
+
+[maze-solver]: ./w3d5/maze-solver.md
