@@ -1,17 +1,17 @@
 # Week 1: Ruby Refresher
-### Monday: Classes and Objects
+### Monday: Classes (Part I) and Objects
 
 #### Readings
 - [Methods][methods]
 - [Objects][objects]
-- [Classes][classes]
+- [Classes][classes-i]
 - [Arrays][arrays]
 - [Strings][strings]
 - [Hashes][hashes]
 
 [methods]: ./w1d1/readings/method.md
 [objects]: ./w1d1/readings/object.md
-[classes]: ./w1d1/readings/class.md
+[classes-i]: ./w1d1/readings/class-i.md
 [arrays]: ./w1d1/readings/array.md
 [strings]: ./w1d1/readings/string.md
 [hashes]: ./w1d1/readings/hash.md
@@ -32,16 +32,26 @@
 [enumerables]: ./w1d2/readings/enumerable.md
 [blocks]: ./w1d2/readings/block.md
 
-### Wednesday: Strings and Hashes
-- String ([reading][string-reading] | [exercises][string-exercises])
-- Hash ([reading][hash-reading] | [exercises][hash-exercises])
+#### Exercises
+- [Iteration][iteration-exercises]
 
-[string-reading]: ./w1d3/string.md
-[string-exercises]: ./w1d3/string.md#exercises
-[hash-reading]: ./w1d3/hash.md
-[hash-exercises]: ./w1d3/hash.md#exercises
+[iteration-exercises]: ./w1d2/exercises/iteration.md
 
-### Thursday (pair project): [Integer#in_words][in-words]
+### Wednesday: Classes (Part II)
+
+#### Readings
+- [Classes][classes-ii]
+
+[classes-ii]: ./w1d3/readings/class-ii.md
+
+#### Exercises
+- [Students and Courses][students-courses]
+- [Tic Tac Toe][tic-tac-toe]
+
+[students-courses]: ./w1d3/exercises/students-and-courses.md
+[tic-tac-toe]: ./w1d3/exercises/tic-tac-toe.md
+
+### Thursday: [Integer#in_words][in-words]
 
 [in-words]: ./w1d4/
 
