@@ -175,4 +175,4 @@ including `F`).
 - Refactor your `Array#my_transpose` method to work with any rectangular
 matrix (not necessarily a square one).
 - Refactor your `String#caesar` method to work with strings containing
-  both upper- and lower-case letters.
+  both upper- and lowercase letters.

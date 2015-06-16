@@ -416,10 +416,10 @@ arrays here every element is a cool thing, or a lucky number, or an
 animal. Collections with heterogeneous types often lack a unifying
 idea.
 
-Finally, heterogeneous are difficult to work with because you never
-know what kind of object you might encounter in the array. Is it a
-`String` and you can call `.upcase` on it? Or is it a number; will it
-be safe to add to it? A hash?
+Finally, heterogeneous arrays are difficult to work with because you
+never know what kind of object you might encounter in the array. Is it a
+`String` and you can call `.upcase` on it? Or is it a number; will it be
+safe to add to it? A hash?
 
 ## Resources
 
