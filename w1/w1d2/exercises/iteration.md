@@ -12,9 +12,10 @@ specify how many times the block should be run.
 
 ### `race`
 
-Now write a `race` method that takes two procs and returns the one with
-the shorter runtime. Use your `benchmark` method to do this. Here, too,
-allow the user to pass in the number of times to run the procs.
+Now write a `race` method that takes an array of procs and returns the
+one with the shorter runtime. Use your `benchmark` method to do this.
+Here, too, allow the user to pass in the number of times to run the
+procs.
 
 ### `eval_block`
 
@@ -69,8 +70,8 @@ eval_block(1, 2, 3)
 
 ### Factors
 
-Write a method `factors(num)` that prints out all the factors of a given
-number.
+Write a method `factors(num)` that returns an array containing all the
+factors of a given number.
 
 ### Bubble Sort
 
