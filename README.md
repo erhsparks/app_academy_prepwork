@@ -1,16 +1,18 @@
 # App Academy Prep
 
+- [Week 0](./w0/)
 - [Week 1](./w1/)
 - [Week 2](./w2/)
 - [Week 3](./w3/)
 - [Week 4](./w4/)
 
 Welcome to App Academy Prep! This course is designed to be completed
-part-time, online, while you are employed, and starts 4 weeks before
-your cycle start date. The course will take 15-20 hours a week; it will
-cover the fundamentals of Ruby programming and will include a mix of
-solo and pair days. TAs will be available for an hour a night
-(Monday-Thursday) to answer questions.
+part-time, online, while you are employed, and should take four weeks to
+complete. The course will take 15-20 hours a week; it will cover the
+fundamentals of Ruby programming and will include a mix of solo and pair
+days. TAs will hold office hours on Monday-Thursday evenings; during
+that time, you have their undivided attention. Take advantage of this
+resource and ask questions!
 
 ### Important Links: you MUST review all of the information covered here.
 

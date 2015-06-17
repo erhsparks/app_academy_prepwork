@@ -1,21 +1,47 @@
-# Week 3: Object Oriented Ruby II
-### Monday: Week 2 Review
-- [Test First Ruby (problems 11, 14)][test-first-iii]
+# Week 3: Object-Oriented Projects
 
-[test-first-iii]: ./w3d1/
+### Monday: Options Hashes and Method Missing
 
-### Tuesday (pair project): [Mastermind][mastermind]
+#### Readings
+- [Symbols and Options Hashes][symbols-options-hashes]
+- [Method Missing][method-missing]
 
-[mastermind]: ./w3d2/
+[symbols-options-hashes]: ./w3d1/readings/symbols-options-hashes.md
+[method-missing]: ./w3d1/readings/method-missing.md
 
-### Wednesday: [Battleship][battleship]
+#### Exercises
+- [Options Hashes][options-hashes-exercises]
+- Complete problem 13 of [Test First Ruby][test-first-ruby].
 
-[battleship]: ./w3d3/
+[options-hashes-exercises]: ./w3d1/exercises/options-hashes.md
 
-### Thursday (pair project): [Hangman][hangman]
+### Tuesday: Mastermind
 
-[hangman]: ./w3d4/
+#### Exercises
+- [Mastermind][mastermind]
 
-### Friday: Refactor your old projects and try the [Maze Solver][maze-solver] as a bonus.
+[mastermind]: ./w3d2/exercises/mastermind.md
 
-[maze-solver]: ./w3d5/maze-solver.md
+### Wednesday: Battleship
+
+#### Exercises
+- [Battleship][battleship]
+
+[battleship]: ./w3d3/exercises/battleship.md
+
+### Thursday: Hangman
+
+#### Exercises
+- [Hangman][hangman]
+
+[hangman]: ./w3d4/exercises/hangman.md
+
+### Friday: Review
+
+#### Exercises
+- Refactor your old work and work on bonus problems.
+
+### Bonus
+- [Maze Solver][maze-solver]
+
+[maze-solver]: ./bonus/maze-solver.md

@@ -1,4 +1,4 @@
-# Week 1: Ruby Refresher
+# Week 1: Basic Object-Oriented Programming
 
 ### Monday: Arrays, Strings, and Objects
 
@@ -30,7 +30,7 @@
 
 #### Exercises
 - Complete problems 05-06 of [Test First Ruby][test-first-ruby]. Do not
-  complete any of the other exercises; we will do these later.
+  complete any of the other exercises.
 - [Iteration][iteration-exercises]
 
 [iteration-exercises]: ./w1d2/exercises/iteration.md
@@ -45,6 +45,8 @@
 [hashes]: ./w1d3/readings/hash.md
 
 #### Exercises
+- Complete problem 14 of [Test First Ruby][test-first-ruby]. Do not
+  complete any of the other exercises.
 - [Class Extensions][class-extensions]
 
 [class-extensions]: ./w1d3/exercises/class-extensions.md
@@ -53,8 +55,10 @@
 
 #### Readings
 - [Classes][classes-ii]
+- [Scope][scope]
 
 [classes-ii]: ./w1d4/readings/class-ii.md
+[scope]: ./w1d4/readings/scope.md
 
 #### Exercises
 - Complete problems 07-11 of [Test First Ruby][test-first-ruby]. Do not
@@ -63,22 +67,43 @@
 
 [my-hash-set]: ./w1d4/exercises/my-hash-set.md
 
-### Friday: Review
+### Friday/Weekend: Writing Good Code
 
-#### Readings
-- Review the material for the week. Make sure you understand everything
-  deeply; if anything is unclear, do some research and ask for help!
-
-#### Exercises
-- Complete problems 12 and 15 of [Test First Ruby][test-first-ruby].
-
-### Weekend: Writing Good Code
+#### Videos (required)
 - Refactoring and Code Smells ([video lecture][refactoring-video])
-- [Ruby Style Guide][ruby-styleguide]
-- Debugging ([video lecture][debugging_video])
+- Debugging ([video lecture][debugging-video])
 
 [refactoring-video]: https://www.youtube.com/watch?v=DC-pQPq0acs
+[debugging-video]: https://vimeo.com/129370279
+
+#### Readings
+- [Coding Style][coding-style]
+- [Ruby Style Guide][ruby-styleguide]
+- [DRY][dry]
+- [Method Decomposition][method-decomposition]
+- [Naming][naming]
+- [Refactoring][refactoring-reading]
+- [Debugging][debugging-reading] (optional)
+
+[coding-style]: ./w1d5/readings/coding-style.md
 [ruby-styleguide]: https://github.com/styleguide/ruby
-[debugging_video]: https://vimeo.com/129370279
+[dry]: ./w1d5/readings/dry.md
+[method-decomposition]: ./w1d5/readings/method-decomposition.md
+[naming]: ./w1d5/readings/naming.md
+[refactoring-reading]: ./refactoring.md
+[debugging-reading]: ./debugger.md
+
+#### Exercises
+- Review the material for the week. Make sure you understand everything
+  deeply; if anything is unclear, do some research and ask for help!
+  After your review, go back and refactor your previous work. Apply the
+  principles you've learned to write the best code you can.
+
+### Bonus
+- [Project Euler][project-euler] problems
+
+[project-euler]: http://projecteuler.net/
+
+### Weekend: Writing Good Code
 
 [test-first-ruby]: https://github.com/appacademy/test-first-ruby

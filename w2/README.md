@@ -1,40 +1,53 @@
-# Week 2: Object Oriented Ruby I
-### Monday: Methods and I/O
-- Methods ([reading][methods-reading] | [exercises][methods-exercises])
-- I/O ([reading][io-reading] | [exercises][io-exercises])
+# Week 2: Intermediate Object-Oriented Programming
 
-[methods-reading]: ./w2d1/methods.md
-[methods-exercises]: ./w2d1/methods.md#exercises
-[io-reading]: ./w2d1/io.md
-[io-exercises]: ./w2d1/io.md#exercises
+### Monday: Mini-Projects
 
-### Tuesday (pair project): [Improved RPN Calculator][improved-rpn-calculator]
+#### Exercises
+- Complete problems 12 and 15 of [Test First Ruby][test-first-ruby].
 
-[improved-rpn-calculator]: ./w2d2/
+### Tuesday: Class Interactions
 
-### Wednesday: Classes
-- Classes ([reading][classes-reading] | [exercises][classes-exercises])
+#### Exercises
+- [Students and Courses][students-courses]
+- [Towers of Hanoi][towers-of-hanoi]
 
-[classes-reading]: ./w2d3/classes.md
-[classes-exercises]: ./w2d3/classes.md#exercises
+[students-courses]: ./w2d2/exercises/students-and-courses.md
+[towers-of-hanoi]: ./w2d2/exercises/towers-of-hanoi.md
 
-### Thursday (pair project): [Tic Tac Toe][tic-tac-toe]
+### Wednesday: I/O
 
-[tic-tac-toe]: ./w2d4/
+#### Readings
+- [I/O][io-reading]
 
-### Friday: Iteration, Symbols, and Options Hashes
-- Iteration ([reading][iteration-reading] | [exercises][iteration-exercises])
-- Symbols and Options Hashes ([reading][symbols-options-hashes-reading] | [exercises][symbols-options-hashes-exercises])
+[io-reading]: ./w2d3/readings/io.md
 
-[iteration-reading]: ./w2d5/iteration.md
-[iteration-exercises]: ./w2d5/iteration.md#exercises
-[symbols-options-hashes-reading]: ./w2d5/symbols-options-hashes.md
-[symbols-options-hashes-exercises]: ./w2d5/symbols-options-hashes.md#exercises
+#### Exercises
+- [I/O][io-exercises]
+- [Improved RPN Calculator][improved-rpn-calculator]
+- **Bonus**: Do some practice problems on [CodeEval][code-eval].
+
+[io-exercises]: ./w2d3/exercises/io.md
+[improved-rpn-calculator]: ./w2d3/exercises/improved-rpn-calculator.md
+
+### Thursday: Tic Tac Toe
+
+#### Readings
+- [Bracket methods][bracket-methods] (relevant to Tic Tac Toe)
+
+[bracket-methods]: ./w2d4/readings/bracket-methods.md
+
+#### Exercises
+- [Tic Tac Toe][tic-tac-toe]
+
+[tic-tac-toe]: ./w2d4/exercises/tic-tac-toe.md
+
+### Friday: Review
+
+#### Exercises
+- Refactor your old work and work on bonus problems.
 
 ### Bonus
-
 - [CodeEval][code-eval] problems (requires git login)
-- [Project Euler][project-euler] problems
 
 [code-eval]: http://www.codeeval.com/
-[project-euler]: http://projecteuler.net/
+[test-first-ruby]: https://github.com/appacademy/test-first-ruby

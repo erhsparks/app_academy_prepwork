@@ -1,4 +1,4 @@
-### Tic-Tac-Toe
+# Tic-Tac-Toe
 
 Let's write a Tic-Tac-Toe game!
 
@@ -11,15 +11,13 @@ Let's write a Tic-Tac-Toe game!
 * You should have a class that represents a human player
   (`HumanPlayer`), and another class for a computer player
   (`ComputerPlayer`). Start with the human player first.
-* Both `HumanPlayer` and `ComputerPlayer` should have the same API;
-  they should have the same set of public methods. This means they
-  should be interchangeable.
+* Both `HumanPlayer` and `ComputerPlayer` should have the same API; they
+  should have the same set of public methods. This means they should be
+  interchangeable.
     * Your `Game` class should be passed two player objects on
-      instantiation; because both player classes have the same API,
-      the game should not know nor care what kind of players it is
-      given.
+      instantiation; because both player classes have the same API, the
+      game should not know nor care what kind of players it is given.
 * Keep the computer AI simple: make a winning move if available; else
   move randomly.
-* Get a TA to review your work and make suggestions!
 
-[bracket-methods]: ./bracket-methods.md
+[bracket-methods]: ../readings/bracket-methods.md
