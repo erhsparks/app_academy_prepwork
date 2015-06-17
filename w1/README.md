@@ -62,7 +62,7 @@
 
 #### Exercises
 - Complete problems 07-11 of [Test First Ruby][test-first-ruby]. Do not
-  complete any of the other exercises; we will do these later.
+  complete any of the other exercises.
 - [MyHashSet][my-hash-set]
 
 [my-hash-set]: ./w1d4/exercises/my-hash-set.md
@@ -90,8 +90,8 @@
 [dry]: ./w1d5/readings/dry.md
 [method-decomposition]: ./w1d5/readings/method-decomposition.md
 [naming]: ./w1d5/readings/naming.md
-[refactoring-reading]: ./refactoring.md
-[debugging-reading]: ./debugger.md
+[refactoring-reading]: ./w1d5/readings/refactoring.md
+[debugging-reading]: ./w1d5/readings/debugger.md
 
 #### Exercises
 - Review the material for the week. Make sure you understand everything
@@ -103,7 +103,5 @@
 - [Project Euler][project-euler] problems
 
 [project-euler]: http://projecteuler.net/
-
-### Weekend: Writing Good Code
 
 [test-first-ruby]: https://github.com/appacademy/test-first-ruby
