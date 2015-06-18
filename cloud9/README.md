@@ -1,6 +1,6 @@
 # Cloud9
 
-[Cloud9][cloud9] will be our environment of choice for pair programming
+[Cloud9][cloud9] will be our environment of choice for programming
 during App Academy Prep. It has many of the same features as more
 powerful desktop editors like Sublime Text or Atom, along with a
 built-in terminal and robust support for collaboration.
@@ -88,16 +88,31 @@ appacademy-prep/
  |- w2/
 ```
 
-### Pair Programming in Cloud9
+### Collaborating in Cloud9
 
-First and foremost, please see our [pairing setup][pairing-setup] guide!
+There are a couple "quirks" to the Cloud9 editor that are good to be
+aware of.
 
-[pairing-setup]: ../pairing-setup.md
+#### Sharing a Terminal
+The workspace's terminal should be shared by default. If for some reason
+you and your partner find yourselves looking at different terminals, you
+should be able to get it back into a shared state by following these
+steps:
 
-In addition, there are a couple "quirks" to the Cloud9 editor that are
-good to be aware of.
+#### USER A: Identify your TMUX session
 
-### Sharing a Terminal
+```
+  $ tmux display-message -p '#S'
+  username@workspace_042
+```
+
+#### USER B: (on the same workspace) - switch to that terminal
+
+```
+  $ tmux switch -t username@workspace_042
+```
+
+#### Shared Terminal View
 If you've used a Cloud9 workspace on your own before, you're probably
 familiar with the default window arrangement:
 
@@ -113,8 +128,8 @@ choose a different layout from the list under **View > Layout**. The
 
 This gives you some more room vertically, so it's easier to look through
 the terminal's history at a glance. Let's say we start using this layout
-and invite a friend into our workspace. In this case, something
-interesting happens:
+and invite a friend (or a TA) into our workspace. In this case,
+something interesting happens:
 
 ![Shared terminal in a horizontal split](images/terminal_shared.png)
 
@@ -130,9 +145,8 @@ scroll through the terminal's history.
 
 How can we deal with this? There are two options.
 
-1. Have both users use the Horizontal Split layout, to maximize the
+1. Have both users use the Horizontal Split layout to maximize the
    visible area of the terminal on both screens.
-2. Have each user run commands in their own terminal window. This is
-   not ideal, since we want both partners to be looking at the same
-   thing; however, it does help to avoid the shared terminal's wonky
-   behavior.
+2. Have each user run commands in their own terminal window. This is not
+   ideal; however, it does help to avoid the wonky behavior described
+   above.
