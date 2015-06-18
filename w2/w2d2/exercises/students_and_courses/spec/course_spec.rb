@@ -1,4 +1,5 @@
 require 'course'
+require 'student'
 
 describe Course do
   let(:course) { Course.new("Ruby 101", "CS", 4) }
@@ -24,6 +25,13 @@ describe Course do
 
       expect(student).to receive(:enroll).with(course)
       course.add_student(student)
+    end
+
+    it "doesn't add the student twice into its list of students" do
+      student = Student.new("Johnny", "Rocket")
+      course.add_student(student)
+
+      expect(course.students).to eq([student])
     end
   end
 end
