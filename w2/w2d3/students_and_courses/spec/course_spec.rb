@@ -16,22 +16,11 @@ describe Course do
   end
 
   describe "#add_student" do
-    let(:current_student) { double(:current_student) }
-    let(:enrolled_course) { double(:enrolled_course) }
-    let(:new_student) { double(:new_student, courses: [enrolled_course]) }
+    it "relies on Student#enroll" do
+      student = double(:student)
 
-    before :each do
-      allow(course).to receive(:students) { [current_student] }
-      allow(new_student).to receive(:enroll)
-      course.add_student(new_student)
-    end
-
-    it "adds a student to its list of students" do
-      expect(course.students).to eq([current_student, new_student])
-    end
-
-    it "adds itself to the student's list of courses" do
-      expect(new_student.courses).to eq([enrolled_course, course])
+      expect(student).to receive(:enroll).with(course)
+      course.add_student(student)
     end
   end
 end
