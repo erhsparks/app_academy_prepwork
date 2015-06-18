@@ -22,7 +22,8 @@ describe Student do
 
   describe "#enroll" do
     let(:old_course) { double(:old_course) }
-    let(:new_course) { double(:new_course, students: []) }
+    let(:course_student) { double(:student) }
+    let(:new_course) { double(:new_course, students: [course_student]) }
 
     before :each do
       allow(student).to receive(:courses).and_return([old_course])
@@ -34,7 +35,7 @@ describe Student do
     end
 
     it "updates the course's list of students" do
-      expect(new_course.students).to eq([student])
+      expect(new_course.students).to eq([course_student, student])
     end
 
     it "ignores attempts to re-enroll into a course" do
