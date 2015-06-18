@@ -2,6 +2,8 @@
 
 Write a set of classes to model `Student`s and `Course`s.
 
+
+## Student
 * `Student#initialize` should take a first and last name.
 * `Student#name` should return the concatenation of the student's
   first and last name.
@@ -13,13 +15,15 @@ Write a set of classes to model `Student`s and `Course`s.
     * `enroll` should ignore attempts to re-enroll a student.
 * `Student#course_load` should return a hash of departments to # of
   credits the student is taking in that department.
+
+## Course
 * `Course#initialize` should take the course name, department, and
   number of credits.
 * `Course#students` should return a list of the enrolled students.
 * `Course#add_student` should add a student to the class.
   * Probably can rely upon `Student#enroll`.
 
-And some extras:
+## And some extras:
 * Each course should also take a set of days of the week (`:mon`,
   `:tue`, ...), plus a time block (assume each day is broken into 8
   consecutive time blocks). So a course could meet
