@@ -27,6 +27,12 @@ describe Student do
 
     before :each do
       allow(student).to receive(:courses).and_return([old_course])
+
+      # used in conjunction with extension specs
+      [old_course, new_course].each do |course|
+        allow(course).to receive(:conflicts_with?)
+      end
+
       student.enroll(new_course)
     end
 

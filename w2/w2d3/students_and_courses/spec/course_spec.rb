@@ -3,6 +3,9 @@ require 'course'
 describe Course do
   let(:course) { Course.new("Ruby 101", "CS", 4) }
 
+  # Comment this line in when working on extras
+  # let(:course) { Course.new("Ruby 101", "CS", 4, [:mon, :tue, :wed], 1) }
+
   describe "#initialize" do
     it "takes a name, department, and # of credits" do
       expect(course.name).to eq("Ruby 101")
