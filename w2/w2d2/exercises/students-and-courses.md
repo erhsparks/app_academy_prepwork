@@ -13,7 +13,9 @@ bundle exec rspec spec/course_spec.rb
 bundle exec rspec spec/extension_spec.rb
 ```
 
-When you are finished with the extras, comment in line 7 in the `spec/course_spec.rb` file and run all of the specs at once with `bundle exec rspec`. Make sure everything passes!
+When you are finished with the extras, comment in line 7 in the
+`spec/course_spec.rb` file and run all of the specs at once with `bundle
+exec rspec`. Make sure everything passes!
 
 ## Student
 * `Student#initialize` should take a first and last name.
