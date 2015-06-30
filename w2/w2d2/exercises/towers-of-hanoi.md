@@ -3,14 +3,34 @@
 Write a
 [Towers of Hanoi](http://en.wikipedia.org/wiki/Towers_of_hanoi) game.
 
-Keep three arrays, which represents the piles of discs. Pick a
-representation of the discs to store in the arrays; maybe just a number
-representing their size. Don't worry too much about making the user
-interface pretty.
+In a class `TowersOfHanoi`, keep an array of three arrays. Each subarray should 
+represent a tower. Each tower should store integers representing the size of its 
+discs. 
 
-In a loop, prompt the user (using
-[gets](http://andreacfm.com/2011/06/11/learning-ruby-gets-and-chomp/))
-and ask what pile to select a disc from, and where to put it.
+You'll want a `#play` method. In a loop, prompt the user using puts. Ask what 
+pile to select a disc from. Use 
+gets([gets](http://andreacfm.com/2011/06/11/learning-ruby-gets-and-chomp/)) to 
+get an answer. Similarly, find out which pile the user wants to move the disc 
+to. Next, you'll want to do different things depending on whether or not the 
+move is valid. Finally, if they have succeeded in moving all of the discs to 
+another pile, they win! The loop should end.
 
-After each move, check to see if they have succeeded in moving all the
-discs, to the final pile. If so, they win!
+You'll want a `TowersOfHanoi#render` method. Don't spend too much time on this, 
+just get it playable.
+
+Think about what other helper methods you might want. Here's a list of all the
+instance methods I had in my TowersOfHanoi class:
+** initialize
+** play
+** render
+** won?
+** valid_move?
+** move
+
+Make sure that the game works in the console. There are also some specs to keep 
+you on the right track (make sure you run `bundle install` first!):
+
+```bash
+bundle exec rspec spec/towers_of_hanoi_spec.rb
+```
+
