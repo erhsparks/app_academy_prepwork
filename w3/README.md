@@ -14,6 +14,7 @@
 - Complete problem 13 of [Test First Ruby][test-first-ruby].
 
 [options-hashes-exercises]: ./w3d1/exercises/options-hashes.md
+[test-first-ruby]: https://github.com/appacademy/test-first-ruby
 
 ### Tuesday: Mastermind
 
