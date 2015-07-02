@@ -19,18 +19,18 @@ Return `true` if the item had been in the set, else return `false`.  Add
 a method `#to_a` which returns an array of the items in the set.
 
 Next, write a method `set1#union(set2)` which returns a new set which
-includes all the elements in EITHER `set1` or `set2`. Write a
+includes all the elements in `set1` or `set2` (or both). Write a
 `set1#intersect(set2)` method that returns a new set which includes only
-those elements that are in BOTH `set1` and `set2`.
+those elements that are in both `set1` and `set2`.
 
 Write a `set1#minus(set2)` method which returns a new set which includes
 all the items of `set1` that aren't in `set2`.
 
 ### Bonus
 - Write a `set1#symmetric_difference(set2)` method; it should return the
-elements contained in either `set1` or `set2`, but not both!  - Write a
-`set1#==(object)` method. It should return true if `object` is a
-`MyHashSet`, has the same size as `set1`, and every member of `object`
-is a member of `set1`.
+  elements contained in either `set1` or `set2`, but not both!
+- Write a `set1#==(object)` method. It should return true if `object` is
+  a `MyHashSet`, has the same size as `set1`, and every member of
+  `object` is a member of `set1`.
 
 [ruby-set-doc]: http://www.ruby-doc.org/stdlib-2.1.2/libdoc/set/rdoc/Set.html
