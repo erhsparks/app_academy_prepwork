@@ -2,6 +2,8 @@ require 'rspec'
 require 'mastermind'
 
 
+class NoInputError < StandardError; end
+
 describe Code do
   let(:uccode) { Code.parse("BBBB") }
   let(:lccode) { Code.parse("bbbb") }
@@ -105,9 +107,6 @@ describe Game do
   let(:game) { Game.new }
   let(:secret_code) { game.instance_variable_get(:@secret_code) }
   let(:code) { Code.parse("BBBB") }
-  let(:set_game) { Game.new(code) }
-
-
 
   describe "#initialize" do
     it "should accept secret code as an argument" do
@@ -129,22 +128,24 @@ describe Game do
     end
   end
 
-  before do
-    $stdin = StringIO.new("bgry\n")
-    $stdout = StringIO.new
-  end
-
-  describe "#get_guess" do
-    it "should parse input and return Code object" do
-      expect(game.get_guess).to be_instance_of(Code)
+  context "check input and output" do
+    before do
+      $stdin = StringIO.new("bgry\n")
+      $stdout = StringIO.new
     end
-  end
 
-  describe "#display_matches" do
-    it "should print near and exact matches" do
-      game.display_matches(code)
-      expect($stdout.string).to match(/exact/)
-      expect($stdout.string).to match(/near/)
+    describe "#get_guess" do
+      it "should parse input and return Code object" do
+        expect(game.get_guess).to be_instance_of(Code)
+      end
+    end
+
+    describe "#display_matches" do
+      it "should print near and exact matches" do
+        game.display_matches(code)
+        expect($stdout.string).to match(/exact/)
+        expect($stdout.string).to match(/near/)
+      end
     end
   end
 end
