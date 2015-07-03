@@ -49,20 +49,20 @@ class Code
     other_color_counts = other_code.color_counts
 
     near_matches = 0
-    self.color_counts.each do |color, count|
+    color_counts.each do |color, count|
       next unless other_color_counts.has_key?(color)
 
       # Give credit for up to count near matches
       near_matches += [count, other_color_counts[color]].min
     end
 
-    near_matches - self.exact_matches(other_code)
+    near_matches - exact_matches(other_code)
   end
 
   def ==(other_code)
     return false unless other_code.is_a?(Code)
 
-    self.pegs == other_code.pegs
+    pegs == other_code.pegs
   end
 
   protected
@@ -100,7 +100,7 @@ class Game
     puts "You aren't very good at this..."
   end
 
-  private
+  # private
 
   def get_guess
     puts "Guess the code:"
