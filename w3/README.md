@@ -21,10 +21,9 @@
 
 ### Wednesday: Battleship
 
-#### Exercises
-- [Battleship][battleship]
+#### Exercises [(Download)][w3d3-exercises]
 
-[battleship]: ./w3d3/exercises/battleship.md
+[w3d3-exercises]: ./w3d3/w3d3.zip?raw=true
 
 ### Thursday: Hangman
 

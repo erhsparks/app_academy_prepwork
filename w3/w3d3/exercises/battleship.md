@@ -19,7 +19,9 @@ following classes:
 
 - A `Board` class with an underlying `grid` (a two-dimensional Array),
   where each element in a row represents a ship, open water, or a space
-  that has already been attacked. Useful methods:
+  that has already been attacked. I used the symbol `:s` to represent an
+  undamaged ship (or ship segment), `nil` for empty space, and `:x` to
+  represent a destroyed space. Useful Board methods:
   - `Board#display`: prints the board, with marks on any spaces that
     have been fired upon.
   - `Board#count`: returns the number of valid targets (ships) remaining
@@ -41,8 +43,9 @@ following classes:
     remaining.
 
 **Note**: You probably won't need a Ship class (at least, not at first).
-For the basic implementation, a simple String or Symbol is probably
-fine. You'll likely want a Ship class for the bonus phase, however.
+As noted above, a simple Symbol is sufficient for the basic
+implementation. For the bonus phase, however, you probably will want to
+write this class.
 
 ## Bonus
 
