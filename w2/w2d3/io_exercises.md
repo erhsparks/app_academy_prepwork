@@ -1,6 +1,6 @@
 # I/O Exercises
 
-* Write a number guessing game. The computer should choose a number between 1 
+* Write a `guessing_game` method. The computer should choose a number between 1 
   and 100. Prompt the user to `guess a number`. Each time through a play loop, 
   get a guess from the user. Print the number guessed and whether it was `too 
   high` or `too low`. Track the number of guesses the player takes. When the 
