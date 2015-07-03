@@ -2,8 +2,6 @@ require 'rspec'
 require 'mastermind'
 
 
-class NoInputError < StandardError; end
-
 describe Code do
   let(:uccode) { Code.parse("BBBB") }
   let(:lccode) { Code.parse("bbbb") }
