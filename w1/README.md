@@ -35,7 +35,7 @@
   [(download)][iteration-zip]
 
 [iteration-exercises]: ./w1d2/exercises/iteration.md
-[iteration-zip]: ./w1d2/exercises/w1d2-exercises.zip
+[iteration-zip]: ./w1d2/exercises/w1d2-exercises.zip?raw=true
 
 ### Wednesday: Extending Classes
 
@@ -53,7 +53,7 @@
   [(download)][class-extensions-zip]
 
 [class-extensions]: ./w1d3/exercises/class-extensions.md
-[class-extensions-zip]: ./w1d3/exercises/w1d3-exercises.zip
+[class-extensions-zip]: ./w1d3/exercises/w1d3-exercises.zip?raw=true
 
 ### Thursday: Writing New Classes
 
@@ -71,7 +71,7 @@
   [(download)][my-hash-set-zip]
 
 [my-hash-set]: ./w1d4/exercises/my-hash-set.md
-[my-hash-set-zip]: ./w1d4/exercises/w1d4-exercises.zip
+[my-hash-set-zip]: ./w1d4/exercises/w1d4-exercises.zip?raw=true
 
 ### Friday/Weekend: Writing Good Code
 
