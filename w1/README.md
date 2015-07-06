@@ -31,9 +31,11 @@
 #### Exercises
 - Complete problems 05-06 of [Test First Ruby][test-first-ruby]. Do not
   complete any of the other exercises.
-- [Iteration][iteration-exercises]
+- Iteration [(instructions)][iteration-exercises] |
+  [(download)][iteration-zip]
 
 [iteration-exercises]: ./w1d2/exercises/iteration.md
+[iteration-zip]: ./w1d2/exercises/w1d2-exercises.zip
 
 ### Wednesday: Extending Classes
 
@@ -47,9 +49,11 @@
 #### Exercises
 - Complete problem 14 of [Test First Ruby][test-first-ruby]. Do not
   complete any of the other exercises.
-- [Class Extensions][class-extensions]
+- Class Extensions [(instructions)][class-extensions] |
+  [(download)][class-extensions-zip]
 
 [class-extensions]: ./w1d3/exercises/class-extensions.md
+[class-extensions-zip]: ./w1d3/exercises/w1d3-exercises.zip
 
 ### Thursday: Writing New Classes
 
@@ -63,9 +67,11 @@
 #### Exercises
 - Complete problems 07-11 of [Test First Ruby][test-first-ruby]. Do not
   complete any of the other exercises.
-- [MyHashSet][my-hash-set]
+- MyHashSet [(instructions)][my-hash-set] |
+  [(download)][my-hash-set-zip]
 
 [my-hash-set]: ./w1d4/exercises/my-hash-set.md
+[my-hash-set-zip]: ./w1d4/exercises/w1d4-exercises.zip
 
 ### Friday/Weekend: Writing Good Code
 
