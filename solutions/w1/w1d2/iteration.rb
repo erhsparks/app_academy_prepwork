@@ -10,7 +10,8 @@ def race(count = 1, procs)
 
   procs.each do |proc|
     time = benchmark(count, proc)
-    if fastest_time && time < fastest_time
+    fastest_time = time unless fastest_time
+    if time < fastest_time
       fastest_time = time
       fastest_proc = proc
     end
