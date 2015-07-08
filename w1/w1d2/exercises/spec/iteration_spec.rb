@@ -120,7 +120,7 @@ describe Array do
     end
 
     it "will use a block if given" do
-      sorted = array.bubble_sort do |num1, num2|
+      sorted = array.bubble_sort! do |num1, num2|
         # order numbers based on descending sort of their squares
         num2**2 <=> num1**2
       end
