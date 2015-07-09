@@ -1,33 +1,3 @@
-def benchmark(count = 1, &prc)
-  start_time = Time.now
-  count.times { prc.call }
-  Time.now - start_time
-end
-
-def race(count = 1, procs)
-  fastest_time = nil
-  fastest_proc = nil
-
-  procs.each do |proc|
-    time = benchmark(count, proc)
-    fastest_time = time unless fastest_time
-    if time < fastest_time
-      fastest_time = time
-      fastest_proc = proc
-    end
-  end
-
-  fastest_proc
-end
-
-def eval_block(*args, &prc)
-  if prc.nil?
-    raise "NO BLOCK GIVEN!"
-  else
-    prc.call(*args)
-  end
-end
-
 def factors(num)
   factors = []
 
