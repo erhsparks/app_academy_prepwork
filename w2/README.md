@@ -2,8 +2,9 @@
 
 ### Monday: Mini-Projects
 
-#### Exercises
-- Complete problems 12 and 15 of [Test First Ruby][test-first-ruby].
+#### Exercises [(Download)][w2d1-exercises]
+
+[w2d1-exercises]: ./w2d1/w2d1.zip?raw=true
 
 ### Tuesday: Class Interactions
 
@@ -11,7 +12,7 @@
 - [Students and Courses][students-courses]
 - [Towers of Hanoi][towers-of-hanoi]
 
-[students-courses]: ./w2d2/exercises/students-and-courses.md
+[students-courses]: ./w2d2/students-courses.zip?raw=true
 [towers-of-hanoi]: ./w2d2/exercises/towers-of-hanoi.md
 
 ### Wednesday: I/O
