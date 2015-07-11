@@ -1,9 +1,9 @@
 # ### `eval_block`
 #
-# Write an `eval_block` method that takes some arguments and a block. It
-# should call the block, passing all the arguments to the block at once
-# (individually, not as an array) using the splat operator. If the user
-# doesn't supply the block, it should print out "NO BLOCK GIVEN!".
+# Write an `eval_block` method that takes some arguments and a block. It should
+# call the block, passing all the arguments to the block at once (individually,
+# not as an array) using the splat operator. If the user doesn't supply the
+# block, it should raise an error and print out "NO BLOCK GIVEN!".
 #
 # To take possibly multiple arguments, check out the Ruby
 # splat operator: http://kconrails.com/2010/12/22/rubys-splat-operator
