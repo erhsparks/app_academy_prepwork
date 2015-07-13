@@ -7,7 +7,7 @@ class Board
   end
 
   def [](row, col)
-    grid[row][col]    
+    grid[row][col]
   end
 
   def []=(row, col, value)
@@ -33,14 +33,14 @@ class Board
     end
 
     marks.each do |mark|
-      return mark if (0..2).all? do |step| 
-        self[step, step] == mark 
+      return mark if (0..2).all? do |step|
+        self[step, step] == mark
       end
     end
 
     marks.each do |mark|
-      return mark if (0..2).all? do |step| 
-        self[step, 2 - step] == mark 
+      return mark if (0..2).all? do |step|
+        self[step, 2 - step] == mark
       end
     end
 
