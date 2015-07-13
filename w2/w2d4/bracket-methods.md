@@ -13,8 +13,8 @@ For example, a tic tac toe game board/grid:
 
 ```
 grid = [
-  [:x, nil, :o],
-  [:x, :o, nil],
+  [:X, nil, :O],
+  [:X, :O, nil],
   [nil, nil, nil]
 ]
 ```
