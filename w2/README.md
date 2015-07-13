@@ -8,12 +8,9 @@
 
 ### Tuesday: Class Interactions
 
-#### Exercises
-- [Students and Courses][students-courses]
-- [Towers of Hanoi][towers-of-hanoi]
+#### Exercises [(Download)][w2d2-exercises]
 
-[students-courses]: ./w2d2/students-courses.zip?raw=true
-[towers-of-hanoi]: ./w2d2/exercises/towers-of-hanoi.md
+[w2d2-exercises]: ./w2d2/w2d2.zip?raw=true
 
 ### Wednesday: I/O
 
@@ -22,13 +19,11 @@
 
 [io-reading]: ./w2d3/readings/io.md
 
-#### Exercises
-- [I/O][io-exercises]
-- [Improved RPN Calculator][improved-rpn-calculator]
-- **Bonus**: Do some practice problems on [CodeEval][code-eval].
+#### Exercises [(Download)][w2d3-exercises]
 
-[io-exercises]: ./w2d3/exercises/io.md
-[improved-rpn-calculator]: ./w2d3/exercises/improved-rpn-calculator.md
+[w2d3-exercises]: ./w2d3/w2d3.zip?raw=true
+
+- **Bonus**: Do some practice problems on [CodeEval][code-eval].
 
 ### Thursday: Tic Tac Toe
 
