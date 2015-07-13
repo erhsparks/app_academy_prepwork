@@ -1,9 +1,11 @@
 # RPN Calculator with I/O
+
 You've written an RPN calculator. Now it's time to go back, refactor,
-and improve it by adding some new functionality. You should be able to
-invoke it as a script from the command line. You should be able to,
-optionally, give it a filename on the command line, in which case it
-opens and reads each line in that file:
+and improve it by adding some new functionality. You can do this in your
+existing RPN calculator Ruby file. You should be able to invoke your
+modified calculator as a script from the command line. You should be
+able to, optionally, give it a filename on the command line, in which
+case it opens and reads each line in that file:
 
 ```
 # calculator_instructions.txt
