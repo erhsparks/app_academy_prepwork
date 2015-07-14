@@ -32,10 +32,9 @@
 
 ### Thursday: Hangman
 
-#### Exercises
-- [Hangman][hangman]
+#### Exercises [(Download)][w3d4-exercises]
 
-[hangman]: ./w3d4/exercises/hangman.md
+[w3d4-exercises]: ./w3d4/w3d4.zip?raw=true
 
 ### Friday: Review
 
