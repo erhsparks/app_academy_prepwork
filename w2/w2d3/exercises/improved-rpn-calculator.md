@@ -34,13 +34,16 @@ result.
 28 #=> printed result, program ends
 ```
 
-**NB**: As you write your code, you may find it useful to periodically
-run the specs (just to be sure you haven't broken anything). However, if
-you write your user interaction code right at the bottom of the file,
-you will almost certainly cause the specs to fail. This is because, when
-RSpec `require`s your RPN calculator file, that code will be run (and
-RSpec will get trapped in an input loop). You can avoid the issue by
-wrapping your code like so:
+For the moment, there aren't tests for the IO functionality of the
+calculator. Just make sure that it continues to pass the original specs,
+and play around with file/command line input on your own to make sure
+that it works. It will be a good exercise in debugging!
+
+**NB**: If you write your user interaction code right at the bottom of
+the file, you will almost certainly cause the specs to fail. This is
+because, when RSpec `require`s your RPN calculator file, that code will
+be run (and RSpec will get stuck waiting for `gets`). You can avoid the
+issue by wrapping your code like so:
 
 ```rb
 if __FILE__ == $PROGRAM_NAME
