@@ -26,12 +26,11 @@ undo the move. However, if we try to set a board position to nil, our
 code throws an error. Rather then making the grid public, write a
 `remove_mark` method for the board class that doesn't throw an error.
 
-Define a `grid` instance variable. You probably want a private reader
-for this.
+Define a `grid` instance variable. You probably want a reader for this.
 
 Board
 * grid
-  - private accesssor
+  - attr_reader
   - nested arrays of nil
 * place_mark
   - expects ([0, 0], :X) as arguments
