@@ -18,7 +18,7 @@ describe TowersOfHanoi do
 
     it "stores discs as integers" do
       towers.each do |tower|
-        expect(tower).all? { |disc| disc.is_a?(Fixnum) }.to be_truthy
+        expect(tower.all? { |disc| disc.is_a?(Fixnum) }).to be_truthy
       end
     end
   end
