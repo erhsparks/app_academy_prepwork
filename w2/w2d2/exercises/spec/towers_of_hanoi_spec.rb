@@ -1,91 +1,101 @@
-require 'towers_of_hanoi'
+require "towers_of_hanoi"
 
 describe TowersOfHanoi do
-  let(:towers_of_hanoi) { TowersOfHanoi.new() }
-  let(:towers) { towers_of_hanoi.instance_variable_get(:@towers) }
+  let(:game) { TowersOfHanoi.new }
+  let(:towers) { game.towers }
 
-  describe '#initialize' do
-    it 'creates an array of towers, which are themselves arrays' do
+  describe "#towers" do
+    it "exposes the game's @towers instance variable" do
+      ivar = game.instance_variable_get(:@towers)
+
+      expect(towers).to be(ivar)
+    end
+
+    it "stores an array of arrays" do
       expect(towers).to be_an_instance_of(Array)
-
-      3.times do |i|
-        expect(towers[i]).to be_an_instance_of(Array)
-      end
+      towers.each { |tower| expect(tower).to be_an_instance_of(Array) }
     end
 
-    it 'creates towers of the correct size' do
-      expect(towers[0].length).to eq(3)
-
-      [1, 2].each do |i|
-        expect(towers[i].length).to eq(0)
+    it "stores discs as integers" do
+      towers.each do |tower|
+        expect(tower).all? { |disc| disc.is_a?(Fixnum) }.to be_truthy
       end
-    end
-
-    it 'stores discs as integers' do
-      expect(towers[0][0]).to be_an_instance_of(Fixnum)
-
-      expect(towers[0][1]).to be < (towers[0][0])
-      expect(towers[0][2]).to be < (towers[0][1])
     end
   end
 
-  describe '#move(from_tower, to_tower)' do
-    let(:disc) { towers[0].last }
-
-    before :each do
-      disc
-      towers_of_hanoi.move(0, 1)
+  describe "#initialize" do
+    it "by default, creates towers of size 3, 0, and 0" do
+      expect(towers.map(&:length)).to eq([3, 0, 0])
     end
 
-    it 'removes disc from tower' do
-      expect(towers[0].length).to eq(2)
+    it "sets the first tower to [3, 2, 1]" do
+      expect(towers.first).to eq([3, 2, 1])
+    end
+  end
+
+  describe "#move(from_tower, to_tower)" do
+    let!(:disc) { towers[0].last }
+
+    before(:each) do
+      game.move(0, 1)
     end
 
-    it 'adds disc to tower' do
-      expect(towers[1].length).to eq(1)
-    end    
+    it "pops the disc off of from_tower" do
+      expect(towers[0]).to eq([3, 2])
+    end
 
-    it 'adds correct disc to tower' do
-      expect(towers[1].last).to eq(disc)
+    it "pushes the disc onto to_tower" do
+      expect(towers[1]).to eq([1])
     end
 
     it "doesn't change uninvolved towers" do
-      expect(towers[2].length).to eq(0)
+      expect(towers[2]).to be_empty
     end
   end
 
-  describe '#valid move?(from_tower, to_tower)' do
-    it "doesn't return false negatives" do
-      expect(towers_of_hanoi.valid_move?(0, 1)).to be_truthy
+  describe "#valid move?(from_tower, to_tower)" do
+    context "when from_tower is empty" do
+      it "returns false" do
+        expect(game.valid_move?(1, 0)).to be_falsey
+      end
     end
 
-    it "doesn't return a false positive for a move from an empty tower" do
-      expect(towers_of_hanoi.valid_move?(1, 0)).to be_falsey
+    context "when moving a larger disc onto a smaller disc" do
+      it "returns false" do
+        game.move(0, 1)
+
+        expect(game.valid_move?(0, 1)).to be_falsey
+      end
     end
 
-    it "doesn't return a false positive for a move onto a larger piece" do
-      towers_of_hanoi.move(0, 1)
-      expect(towers_of_hanoi.valid_move?(0, 1)).to be_falsey
-    end    
+    context "when moving a smaller disc onto a larger one" do
+      it "returns true" do
+        expect(game.valid_move?(0, 1)).to be_truthy
+      end
+    end
   end
 
-  describe '#won?' do
-    it "doesn't return false negatives" do
-      [[0, 1], [0, 2], [1, 2], [0, 1], [2, 0], [2, 1], [0, 1]].each do |move|
-        towers_of_hanoi.move(*move)
-      end
+  describe "#won?" do
+    context "when all discs have been moved to the middle or last stack" do
+      it "returns true" do
+        [[0, 1], [0, 2], [1, 2], [0, 1], [2, 0], [2, 1], [0, 1]].each do |move|
+          game.move(*move)
+        end
 
-      expect(towers_of_hanoi.won?).to be_truthy
+        expect(game.won?).to be_truthy
+      end
     end
 
-    it "doesn't return false positives" do
-      expect(towers_of_hanoi.won?).to be_falsey
+    context "when the game is incomplete" do
+      it "returns false" do
+        expect(game.won?).to be_falsey
 
-      [[0, 1], [0, 2], [1, 2], [0, 1]].each do |move|
-        towers_of_hanoi.move(*move)
+        [[0, 1], [0, 2], [1, 2], [0, 1]].each do |move|
+          game.move(*move)
+        end
+
+        expect(game.won?).to be_falsey
       end
-
-      expect(towers_of_hanoi.won?).to be_falsey
     end
   end
 end

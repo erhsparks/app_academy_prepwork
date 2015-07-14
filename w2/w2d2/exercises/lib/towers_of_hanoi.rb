@@ -5,7 +5,8 @@
 #
 # In a class `TowersOfHanoi`, keep a `towers` instance variable that is an array
 # of three arrays. Each subarray should represent a tower. Each tower should
-# store integers representing the size of its discs.
+# store integers representing the size of its discs. Expose this instance
+# variable with an `attr_reader`.
 #
 # You'll want a `#play` method. In a loop, prompt the user using puts. Ask what
 # pile to select a disc from. The pile should be the index of a tower in your
