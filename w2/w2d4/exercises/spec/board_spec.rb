@@ -1,126 +1,162 @@
-require 'board'
+require "board"
 
-describe 'Board' do
+describe "Board" do
   let(:board) { Board.new }
 
-  def place_marks(marks, sym)
-    marks.each { |pos| board.place_mark(pos, sym) }
-  end
+  describe "#grid" do
+    it "should expose the board's @grid instance variable" do
+      ivar = board.instance_variable_get(:@grid)
 
-  def fill_cats_game
-    [[0, 0], [1, 1], [1, 2], [2, 1]].each do |pos|
-      board.place_mark(pos, :X)
-    end
-
-    [[0, 1], [0, 2], [1, 0], [2, 0], [2, 2]].each do |pos|
-      board.place_mark(pos, :O)
+      expect(board.grid).to be(ivar)
     end
   end
 
-  before do
-    class Board
-      def get_grid
-        send(:grid)
+  describe "initialize" do
+    context "when passed a grid argument" do
+      it "sets the board's grid to the value passed in" do
+        grid = [[1, 2], [3, 4]]
+        board = Board.new(grid)
+
+        expect(board.grid).to be(grid)
       end
     end
-  end
 
-  describe "grid" do
-    it "should have a private accessor method" do
-      expect(board.get_grid).to be_an_instance_of(Array)
-      expect { board.grid }.to raise_error(NoMethodError)
-    end
-  end
-
-  describe 'initialize' do
-    it "should create a 3 by 3 grid of nil values" do
-      expect(board.get_grid.length).to be 3
-
-      (0..2).each do |i|
-        expect(board.get_grid[i].length).to be 3
-
-        board.get_grid[i].each do |cell|
-          expect(cell).to be nil
+    context "when no grid is passed in" do
+      it "creates a 3 by 3 grid of nil values" do
+        expect(board.grid.length).to eq(3)
+        board.each do |row|
+          expect(row.length).to eq(3)
+          expect(row.all?(&:nil?)).to be_truthy
         end
       end
     end
   end
 
-  describe 'place_mark' do
-    it 'should change the value of a square' do
+  describe "place_mark(pos, mark)" do
+    it "should change the value of a square" do
       board.place_mark([0, 0], :X)
 
-      expect(board.get_grid[0][0]).to be :X
+      expect(board.grid[0][0]).to eq(:X)
     end
   end
 
-  describe 'empty?' do
-    it 'should return true when the square is empty' do
-      expect(board.empty?([0, 0])).to be_truthy
-    end
+  describe "remove_mark(pos)" do
+    it "sets the value of the board at `pos` to nil" do
+      board.place_mark([0, 0], :X)
+      board.remove_mark([0, 0])
 
-    it 'should return false when the square has a mark' do
-      place_marks([[0, 0]], :X)
-
-      expect(board.empty?([0, 0])).to be_falsey
+      expect(board.grid[0][0]).to be_nil
     end
   end
 
-  describe 'winner' do
-    it 'should return :X when :X has won a row' do
-      place_marks([[0, 0], [0, 1], [0, 2]], :X)
-
-      expect(board.winner).to be :X
+  describe "empty?" do
+    context "when the square is empty" do
+      it "returns true" do
+        expect(board.empty?([0, 0])).to be_truthy
+      end
     end
 
-    it 'should return :O when :O has won a column' do
-      place_marks([[0, 2], [1, 2], [2, 2]], :O)
+    context "when the square is marked" do
+      it "returns false" do
+        place_marks([[0, 0]], :X)
 
-      expect(board.winner).to be :O
-    end
-
-    it 'should return nil when there is no winner' do
-      expect(board.winner).to be nil
-
-      fill_cats_game
-
-      expect(board.winner).to be nil
-    end
-
-    it 'should handle diagonals' do
-      place_marks([[0, 0], [1, 1], [2, 2]], :X)
-
-      expect(board.winner).to be :X
-    end
-
-    it 'should handle diagonals' do
-      place_marks([[0, 2], [1, 1], [2, 0]], :X)
-
-      expect(board.winner).to be :X
+        expect(board.empty?([0, 0])).to be_falsey
+      end
     end
   end
 
-  describe 'over?' do
-    it "shouldn't return false positives" do
-      expect(board.over?).to be_falsey
+  describe "winner" do
+    context "when :X has won" do
+      context "on a row" do
+        it "returns :X" do
+          place_marks([[0, 0], [0, 1], [0, 2]], :X)
 
-      place_marks([[0, 0], [0, 1]], :X)
-      place_marks([[0, 2]], :O)
+          expect(board.winner).to be :X
+        end
+      end
 
-      expect(board.over?).to be_falsey
+      context "on the left diagonal" do
+        it "returns :X" do
+          place_marks([[0, 0], [1, 1], [2, 2]], :X)
+
+          expect(board.winner).to be :X
+        end
+      end
+
+      context "on the right diagonal" do
+        it "returns :X" do
+          place_marks([[0, 2], [1, 1], [2, 0]], :X)
+
+          expect(board.winner).to be :X
+        end
+      end
     end
 
-    it "should return true when the game is won" do
-      place_marks([[0, 0], [0, 1], [0, 2]], :X)
+    context "when :O has won a column" do
+      it "returns :O" do
+        place_marks([[0, 2], [1, 2], [2, 2]], :O)
 
-      expect(board.over?).to be_truthy
+        expect(board.winner).to be :O
+      end
     end
 
-    it "should return true when the cat has the game" do
-      fill_cats_game
+    context "when there is no winner" do
+      it "returns nil" do
+        expect(board.winner).to be nil
 
-      expect(board.over?).to be_truthy
+        fill_cats_game
+
+        expect(board.winner).to be nil
+      end
+    end
+  end
+
+  describe "over?" do
+    context "when the board is empty" do
+      it "returns false" do
+        expect(board.over?).to be_falsey
+      end
+    end
+
+    context "when the board is in progress" do
+      it "returns false" do
+        place_marks([[0, 0], [0, 1]], :X)
+        place_marks([[0, 2]], :O)
+
+        expect(board.over?).to be_falsey
+      end
+    end
+
+    context "when the game is won" do
+      it "returns true" do
+        place_marks([[0, 0], [0, 1], [0, 2]], :X)
+
+        expect(board.over?).to be_truthy
+      end
+    end
+
+    context "when the game is tied" do
+      it "returns true" do
+        fill_cats_game
+
+        expect(board.over?).to be_truthy
+      end
     end
   end
 end
 
+# spec helper methods
+
+def place_marks(marks, sym)
+  marks.each { |pos| board.place_mark(pos, sym) }
+end
+
+def fill_cats_game
+  [[0, 0], [1, 1], [1, 2], [2, 1]].each do |pos|
+    board.place_mark(pos, :X)
+  end
+
+  [[0, 1], [0, 2], [1, 0], [2, 0], [2, 2]].each do |pos|
+    board.place_mark(pos, :O)
+  end
+end

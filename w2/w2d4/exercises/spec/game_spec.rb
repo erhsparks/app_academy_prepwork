@@ -1,43 +1,62 @@
-require 'game'
+require "game"
+require "board"
 
 describe "Game" do
-  let(:game) { Game.new(HumanPlayer.new('Claire'), ComputerPlayer.new('Gizmo')) }
-  
-  describe "initialize" do
-    it "should store a board as an instance variable" do
-      expect(game.instance_variable_get(:@board)).to be_an_instance_of(Board)
-    end
+  let(:player_one) { double("player", name: "Claire", mark: :X) }
+  let(:player_two) { double("player", name: "Gizmo", mark: :O) }
 
-    it "should set the current player to the first argument" do
-      expect(game.send(:current_player)).to be_an_instance_of(HumanPlayer)
+  let(:game) do
+    Game.new(player_one, player_two)
+  end
+
+  describe "#board" do
+    it "exposes a @board instance variable" do
+      ivar = game.instance_variable_get(:@board)
+
+      expect(game.board).to be(ivar)
+      expect(game.board).to be_an_instance_of(Board)
     end
   end
 
-#  describe "play" do
-#    it "should call `display` and then `get_move` on current player" do
-#      c_p = instance_double("HumanPlayer", name: "Charlie", mark: :X)
-#      allow(c_p).to receive(:mark=)
-#      allow(c_p).to receive(:display).with(game.instance_variable_get(:@board))
-#      allow(c_p).to receive(:get_move)
-#
-#      expect(c_p).to receive(:display).ordered
-#      expect(c_p).to receive(:get_move).ordered
-#      Game.new(c_p, ComputerPlayer.new('bob')).play
-#    end
-#  end
+  describe "#play_turn" do
+    before(:each) do
+      allow(player_one).to receive(:display)
+      allow(player_one).to receive(:get_move)
+    end
+
+    it "displays the board to the current player" do
+      expect(player_one).to receive(:display).with(game.board)
+
+      game.play_turn
+    end
+
+    it "gets a move from the current player and performs it" do
+      expect(player_one).to receive(:get_move).and_return(:move)
+      expect(board).to receive(:make_mark).with(:move, :X)
+
+      game.play_turn
+    end
+
+    it "passes the turn to the other player" do
+      expect(game).to receive(:switch_players!)
+
+      game.play_turn
+    end
+  end
+
+  describe "#current_player" do
+    it "starts set to the first player passed to Game.new" do
+      expect(game.current_player).to be(player_one)
+    end
+  end
 
   describe "switch_players!" do
+    it "updates the value of current_player" do
+      expect(game.current_player).to be(player_one)
 
-  end
-end
+      game.switch_players!
 
-describe "Board" do
-  describe "remove_mark" do
-    it "should set the board at the given position to nil" do
-      board = Board.new
-      board.instance_variable_get(:@grid)[0][0] = :O
-      board.remove_mark([0, 0])
-      expect(board.instance_variable_get(:@grid)[0][0]).to be nil
+      expect(game.current_player).to be(player_two)
     end
   end
 end

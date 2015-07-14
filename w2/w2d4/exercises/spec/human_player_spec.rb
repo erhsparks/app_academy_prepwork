@@ -1,16 +1,16 @@
-require 'game'
+require "game"
 
 describe "HumanPlayer" do
-  let(:human) { HumanPlayer.new('Frankie') }
+  let(:human) { HumanPlayer.new("Frankie") }
   let(:board) { Board.new }
 
   class NoMoreInput < StandardError
   end
-  
+
   before do
     $stdout = StringIO.new
     $stdin = StringIO.new
-    
+
     class HumanPlayer
       def gets
         result = $stdin.gets
@@ -19,16 +19,16 @@ describe "HumanPlayer" do
         result
       end
     end
-    
+
     def recent_output
       outputs = $stdout.string.split("\n")
       max = [outputs.length, 5].min
-      outputs[-max..-1].join(' ')
+      outputs[-max..-1].join(" ")
     end
 
     def human.get_move!
       get_move
-    rescue NoMoreInput
+      rescue NoMoreInput
     end
   end
 
@@ -37,14 +37,14 @@ describe "HumanPlayer" do
     $stdin = STDIN
   end
 
-  describe "initialize" do
-    it "should set an instance variable to the given name" do
-      expect(human.instance_variable_get(:@name)).to eq('Frankie')
+  describe "#initialize" do
+    it "initializes with a name" do
+      expect(human.name).to eq("Frankie")
     end
   end
 
-  describe "get_move" do
-    it "should ask for a move" do
+  describe "#get_move" do
+    it "asks for a move" do
       human.get_move!
       expect($stdout.string.downcase).to match(/where/)
     end
@@ -56,13 +56,12 @@ describe "HumanPlayer" do
     end
   end
 
-  describe "display" do
-    it "should print the board to the screen" do
+  describe "#display" do
+    it "prints the board to the screen" do
       board.place_mark([0, 0], :X)
       human.display(board)
 
-      expect($stdout.string).to match(/X/) 
+      expect($stdout.string).to match(/X/)
     end
   end
 end
-

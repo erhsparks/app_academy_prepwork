@@ -1,5 +1,5 @@
 class Board
-  attr_reader :marks
+  attr_reader :grid, :marks
 
   def initialize
     @grid = Array.new(3) { Array.new(3) }
@@ -14,7 +14,7 @@ class Board
     raise "mark already placed there!" unless empty?([row, col])
     grid[row][col] = value
   end
-  
+
   def over?
     grid.flatten.none? { |pos| pos.nil? } || winner
   end
