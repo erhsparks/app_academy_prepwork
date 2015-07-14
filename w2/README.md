@@ -32,10 +32,9 @@
 
 [bracket-methods]: ./w2d4/readings/bracket-methods.md
 
-#### Exercises
-- [Tic Tac Toe][tic-tac-toe]
+#### Exercises [(Download)][w2d4-exercises]
 
-[tic-tac-toe]: ./w2d4/exercises/tic-tac-toe.md
+[w2d4-exercises]: ./w2d4/w2d4.zip?raw=true
 
 ### Friday: Review
 
@@ -46,4 +45,3 @@
 - [CodeEval][code-eval] problems (requires git login)
 
 [code-eval]: http://www.codeeval.com/
-[test-first-ruby]: https://github.com/appacademy/test-first-ruby
