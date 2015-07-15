@@ -1,22 +1,23 @@
 class Hangman
   MAX_GUESSES = 8
 
-  def initialize(guesser, referee)
-    @guesser, @referee = guesser, referee
+  attr_reader :guesser, :referee, :board
+
+  def initialize(players)
+    @guesser = players[:guesser]
+    @referee = players[:referee]
     @num_remaining_guesses = MAX_GUESSES
   end
 
   def play
-    secret_length = @referee.pick_secret_word
-    @guesser.register_secret_length(secret_length)
-    @current_board = [nil] * secret_length
+    setup
 
     while @num_remaining_guesses > 0
-      p @current_board
+      p @board
       take_turn
 
       if won?
-        p @current_board
+        p @board
         puts "Guesser wins!"
         return
       end
@@ -28,9 +29,14 @@ class Hangman
     nil
   end
 
-  private
+  def setup
+    secret_length = @referee.pick_secret_word
+    @guesser.register_secret_length(secret_length)
+    @board = [nil] * secret_length
+  end
+
   def take_turn
-    guess = @guesser.guess(@current_board, @num_remaining_guesses)
+    guess = @guesser.guess(@board)
     indices = @referee.check_guess(guess)
     update_board(guess, indices)
     @num_remaining_guesses -= 1 if indices.empty?
@@ -39,11 +45,11 @@ class Hangman
   end
 
   def update_board(guess, indices)
-    indices.each { |index| @current_board[index] = guess }
+    indices.each { |index| @board[index] = guess }
   end
 
   def won?
-    @current_board.all?
+    @board.all?
   end
 end
 
@@ -52,8 +58,7 @@ class HumanPlayer
     puts "Secret is #{length} letters long"
   end
 
-  def guess(board, num_remaining_guesses)
-    p "NUM GUESSES LEFT: #{num_remaining_guesses}"
+  def guess(board)
     p board
     puts "Input guess:"
     gets.chomp
@@ -79,7 +84,7 @@ class HumanPlayer
     puts "What positions does that occur at?"
 
     # didn't check for bogus input here; got lazy :-)
-    positions = gets.chomp.split(",").map { |i_str| Integer(i_str) }
+    gets.chomp.split(",").map { |i_str| Integer(i_str) }
   end
 
   def require_secret
@@ -92,6 +97,8 @@ class ComputerPlayer
   def self.player_with_dict_file(dict_file_name)
     ComputerPlayer.new(File.readlines(dict_file_name).map(&:chomp))
   end
+
+  attr_reader :candidate_words
 
   def initialize(dictionary)
     @dictionary = dictionary
@@ -118,18 +125,18 @@ class ComputerPlayer
     @candidate_words = @dictionary.select { |word| word.length == length }
   end
 
-  def guess(board, num_remaining_guesses)
+  def guess(board)
     # I left this here so you can see it narrow things down.
-    p @candidate_words
+    # p @candidate_words
 
     freq_table = freq_table(board)
 
     most_frequent_letters = freq_table.sort_by { |letter, count| count }
-    letter, count = most_frequent_letters.last
+    letter, _ = most_frequent_letters.last
 
     # we'll never repeat a guess because we only look at unfilled
     # positions to calculate frequency, and we remove a word from the
-    # candidates if it has a guessed letter an unfilled position in
+    # candidates if it has a guessed letter in an unfilled position on
     # the board.
     letter
   end
