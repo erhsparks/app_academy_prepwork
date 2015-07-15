@@ -24,6 +24,7 @@ class Student
     self.courses.each do |course|
       load[course.department] += course.credits
     end
+    load
   end
 
   def has_conflict?(new_course)
