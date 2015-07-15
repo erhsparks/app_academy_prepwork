@@ -17,7 +17,7 @@
 #### Readings
 - [I/O][io-reading]
 
-[io-reading]: https://github.com/appacademy/appacademy-prep/blob/cd75dfcf98af3713d7ba0daa98e5f306ce0d98ab/w2/w2d3/readings/io_reading.md
+[io-reading]: ./w2d3/readings/io.md
 
 #### Exercises [(Download)][w2d3-exercises]
 
@@ -28,9 +28,7 @@
 ### Thursday: Tic Tac Toe
 
 #### Readings
-- [Bracket methods][bracket-methods] (relevant to Tic Tac Toe)
-
-[bracket-methods]: ./w2d4/readings/bracket-methods.md
+- Included in exercises
 
 #### Exercises [(Download)][w2d4-exercises]
 
