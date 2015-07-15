@@ -1,54 +1,58 @@
 # Tic-Tac-Toe
 
-Let's write a Tic-Tac-Toe game!
+Let's write a Tic-Tac-Toe game! Read the entire instructions before getting
+started.
 
-* You should have a `Board` class and a `Game` class. The board should
-  have methods like `#over?`, `winner`, `empty?(pos)`, `place_mark(pos,
-  mark)`, etc.
-* If you want to be a little fancy, read the attached `bracket-methods`
-  reading.
-* The `Game` class should have a `play` method that loops, reading in
-  user moves. When the game is over, exit the loop.
-* You should have a class that represents a human player
-  (`HumanPlayer`), and another class for a computer player
-  (`ComputerPlayer`). Start with the human player first.
-* Both `HumanPlayer` and `ComputerPlayer` should have the same API; they
-  should have the same set of public methods. This means they should be
-  interchangeable.
-    * Your `Game` class should be passed two player objects on
-      instantiation; because both player classes have the same API, the
-      game should not know nor care what kind of players it is given.
-* Keep the computer AI simple: make a winning move if available; else
-  move randomly.
+* In your `Board` class, you should have a grid instance variable to keep track
+  of the board tiles. You should also have the following methods:
+  - `place_mark`, which takes a position such as `[0, 0]` and a mark such as :X
+    as arguments. It should throw an error if the position isn't empty.
+  - `empty?`, which takes a position as an argument
+  - `winner`, which should return a mark
+  - `over?`, which should return true or false
+  - If you want to be a little fancy, read the attached `bracket-methods`
+    reading.
 
-For the AI logic: we'd like to make a move, see if we've won, and then
-undo the move. However, if we try to set a board position to nil, our
-code throws an error. Rather then making the grid public, write a
-`remove_mark` method for the board class that doesn't throw an error.
+* In your player classes, have an instance variable `mark` that the game will
+  set on initialize. 
 
-Define a `grid` instance variable. You probably want a reader for this.
+* In your `HumanPlayer` class,
+  - `display` should print the board out to the console
+  - `get_move` should allow the player to enter a move of the form '0, 0', and
+    return it as a position of the form `[0, 0]`
 
-Board
-* grid
-  - attr_reader
-  - nested arrays of nil
-* place_mark
-  - expects ([0, 0], :X) as arguments
-* empty?
-  - takes ([0, 0]) as an argument
-* winner
-  - should return a position
+* In your `ComputerPlayer` class, 
+  - `display` should store the board it's passed as an instance variable, so 
+    that `get_move` has access to it 
+  - `get_move` should return a winning move if one is available, and otherwise 
+    move randomly.
 
-HumanPlayer
-* get_move
-  - expects entries of the form '0, 0'
+* In your `Game` class, set the marks of the players you are passed. Include
+  the following methods:
+  - `current_player`
+  - `switch_players!`
+  - `play_turn`, which handles the logic for a single turn
+  - `play`, which calls `play_turn` each time through a loop until the game is
+    over 
+  
+Pro tips:
+  * Both `HumanPlayer` and `ComputerPlayer` should have the same API; they
+    should have the same set of public methods. This means they should be
+    interchangeable.
+  * Your `Game` class should be passed two player objects on
+    instantiation; because both player classes have the same API, the
+    game should not know nor care what kind of players it is given.
 
-Player
-* attr_accessor `mark`
+Run the specs in this order:
+`rspec spec/board_spec.rb`
+`rspec spec/human_player_spec.rb`
+`rspec spec/computer_player_spec.rb`
+`rspec spec/game_spec.rb`
+`rspec spec`
 
-Note that the specs are written to help you build the game in this
-manner; there are other implementations that would also work but not
-pass the specs. We choose to make the tradeoff to sacrifice flexibility
-in implementation for the ability to offer you more support in
-implementing this particular solution. Don't worry, you'll have plenty
-of opportunities to make larger-scale design decisions going forward!
+Note that the specs are written to help you build the game in a very specific
+way; there are other implementations that would also result in a playable game 
+but not pass the specs. We choose to sacrifice flexibility of design in order 
+to offer you more support implementing this particular solution. Don't worry, 
+you'll have plenty of opportunities to make larger-scale design decisions going 
+forward!

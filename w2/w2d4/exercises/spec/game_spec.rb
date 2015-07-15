@@ -9,6 +9,11 @@ describe "Game" do
     Game.new(player_one, player_two)
   end
 
+  before(:each) do
+    allow(player_one).to receive(:mark=)
+    allow(player_two).to receive(:mark=)
+  end
+
   describe "#board" do
     it "exposes a @board instance variable" do
       ivar = game.instance_variable_get(:@board)
@@ -21,18 +26,13 @@ describe "Game" do
   describe "#play_turn" do
     before(:each) do
       allow(player_one).to receive(:display)
-      allow(player_one).to receive(:get_move)
-    end
-
-    it "displays the board to the current player" do
-      expect(player_one).to receive(:display).with(game.board)
-
-      game.play_turn
+      allow(player_two).to receive(:display)
+      allow(player_one).to receive(:get_move).and_return([0, 0])
     end
 
     it "gets a move from the current player and performs it" do
       expect(player_one).to receive(:get_move).and_return(:move)
-      expect(board).to receive(:make_mark).with(:move, :X)
+      expect(game.board).to receive(:place_mark).with(:move, :X)
 
       game.play_turn
     end

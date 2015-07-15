@@ -24,7 +24,7 @@ describe "Board" do
     context "when no grid is passed in" do
       it "creates a 3 by 3 grid of nil values" do
         expect(board.grid.length).to eq(3)
-        board.each do |row|
+        board.grid.each do |row|
           expect(row.length).to eq(3)
           expect(row.all?(&:nil?)).to be_truthy
         end
@@ -37,15 +37,6 @@ describe "Board" do
       board.place_mark([0, 0], :X)
 
       expect(board.grid[0][0]).to eq(:X)
-    end
-  end
-
-  describe "remove_mark(pos)" do
-    it "sets the value of the board at `pos` to nil" do
-      board.place_mark([0, 0], :X)
-      board.remove_mark([0, 0])
-
-      expect(board.grid[0][0]).to be_nil
     end
   end
 
