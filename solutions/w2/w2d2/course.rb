@@ -1,9 +1,9 @@
 class Course
   attr_reader :department, :name, :credits, :time_block, :days, :students
 
-  def initialize(name, department, credits, time_block, days)
-    @name, @department, @credits, @time_block, @days =
-      name, department, credits, time_block, days
+  def initialize(name, department, credits, days, time_block)
+    @name, @department, @credits, @days, @time_block =
+      name, department, credits, days, time_block
     @students = []
   end
 
