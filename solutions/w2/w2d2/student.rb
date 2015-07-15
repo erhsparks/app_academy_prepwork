@@ -1,13 +1,13 @@
 class Student
-  attr_reader :courses, :fname, :lname
+  attr_reader :courses, :first_name, :last_name
 
-  def initialize(fname, lname)
-    @fname, @lname = fname.capitalize, lname.capitalize
+  def initialize(first_name, last_name)
+    @first_name, @last_name = first_name.capitalize, last_name.capitalize
     @courses = []
   end
 
   def name
-    "#{fname} #{lname}"
+    "#{first_name} #{last_name}"
   end
 
   def enroll(course)
@@ -22,7 +22,7 @@ class Student
   def course_load
     load = Hash.new(0)
     self.courses.each do |course|
-      load[course.department] += course.num_credits
+      load[course.department] += course.credits
     end
   end
 

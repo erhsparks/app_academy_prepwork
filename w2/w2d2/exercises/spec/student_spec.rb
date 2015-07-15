@@ -26,7 +26,7 @@ describe Student do
     let(:new_course) { double(:new_course, students: [course_student]) }
 
     before :each do
-      allow(student).to receive(:courses).and_return([old_course])
+      student.courses.push(old_course)
 
       # used in conjunction with extension specs
       [old_course, new_course].each do |course|
