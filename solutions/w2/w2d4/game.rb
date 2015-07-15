@@ -17,7 +17,7 @@ class Game
     current_player.display(board)
 
     until board.over?
-      play_turn 
+      play_turn
     end
 
     if game_winner

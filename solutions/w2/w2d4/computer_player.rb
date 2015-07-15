@@ -18,16 +18,16 @@ class ComputerPlayer
       return move if wins?(move)
     end
 
-    return moves.sample
+    moves.sample
   end
 
   def wins?(move)
     board[*move] = mark
     if board.winner == mark
-      board[*move] = move
+      board[*move] = nil
       true
     else
-      board[*move] = move
+      board[*move] = nil
       false
     end
   end
