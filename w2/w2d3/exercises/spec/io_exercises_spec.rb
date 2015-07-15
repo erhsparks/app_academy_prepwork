@@ -16,7 +16,7 @@ describe 'guessing_game' do
 
       result
     end
-    
+
     def recent_output
       outputs = $stdout.string.split("\n")
       max = [outputs.length, 5].min
@@ -36,7 +36,7 @@ describe 'guessing_game' do
 
   let(:guesses) { (1..100).to_a.shuffle }
 
-  def answer 
+  def answer
     guesses[guesses.index(gets.to_i) - 1]
   rescue NoMoreInput
     guesses.last
@@ -85,9 +85,9 @@ describe 'guessing_game' do
 
   it "should terminate with a correct guess" do
     $stdin.string = guesses.join("\n")
-    guessing_game  
+    guessing_game
   end
- 
+
   it "shouldn't choose 0" do
     1000.times do
       $stdin.string = "0\n"
