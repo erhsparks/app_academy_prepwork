@@ -17,7 +17,7 @@
 #### Readings
 - [I/O][io-reading]
 
-[io-reading]: ./w2d3/readings/io.md
+[io-reading]: https://github.com/appacademy/appacademy-prep/blob/cd75dfcf98af3713d7ba0daa98e5f306ce0d98ab/w2/w2d3/readings/io_reading.md
 
 #### Exercises [(Download)][w2d3-exercises]
 
