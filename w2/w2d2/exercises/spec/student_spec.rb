@@ -56,11 +56,7 @@ describe Student do
       javascript = double(:js_course, department: "CS", credits: 4)
       drama = double(:drama_course, department: "Theatre", credits: 2)
 
-      allow(student).to receive(:courses).and_return([
-        ruby,
-        javascript,
-        drama
-      ])
+      student.courses.push(ruby, javascript, drama)
 
       expect(student.course_load).to eq({
         "CS" => 8,
