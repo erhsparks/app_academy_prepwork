@@ -1,5 +1,5 @@
 require 'rspec'
-require 'options_hashes'
+require '00_options_hashes'
 
 describe '#transmogrify' do
   it 'should work without an options hash passed in' do

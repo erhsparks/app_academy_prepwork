@@ -7,6 +7,5 @@ def transmogrify(word, options = {})
   result = result.upcase if options[:upcase]
   result = result.reverse if options[:reverse]
 
-  result*options[:times]
+  result * options[:times]
 end
-

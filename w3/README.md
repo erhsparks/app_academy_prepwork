@@ -9,12 +9,9 @@
 [symbols-options-hashes]: ./w3d1/readings/symbols-options-hashes.md
 [method-missing]: ./w3d1/readings/method-missing.md
 
-#### Exercises
-- [Options Hashes][options-hashes-exercises]
-- Complete problem 13 of [Test First Ruby][test-first-ruby].
+#### Exercises [(Download)][w3d1-exercises]
 
-[options-hashes-exercises]: ./w3d1/exercises/options-hashes.md
-[test-first-ruby]: https://github.com/appacademy/test-first-ruby
+[w3d1-exercises]: ./w3d1/w3d1.zip?raw=true
 
 ### Tuesday: Mastermind
 
