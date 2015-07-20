@@ -15,10 +15,9 @@
 
 ### Tuesday: Mastermind
 
-#### Exercises
-- [Mastermind][mastermind]
+#### Exercises [(Download)][w3d2-exercises]
 
-[mastermind]: ./w3d2/exercises/mastermind.md
+[w3d2-exercises]: ./w3d2/w3d2.zip?raw=true
 
 ### Wednesday: Battleship
 
