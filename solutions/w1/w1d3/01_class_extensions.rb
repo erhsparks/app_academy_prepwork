@@ -46,6 +46,7 @@ class Hash
 end
 
 class Fixnum
+  # Recursive Solution
   def stringify(base)
     # handle the case where self == 0.
     return "0" if self == 0
@@ -72,5 +73,20 @@ class Fixnum
     # self_to_s(144, 10) => {:low_digit => 4, :leftover => 140}
     #   self_to_s(14, 10) => {:low_digit => 4, :leftover => 10}
     #     self_to_s(1, 10) => {:low_digit => 1, :leftover => 0}
+  end
+
+  # Iterative Solution 
+  def stringify_iterative(base)
+    digits = %w[0 1 2 3 4 5 6 7 8 9 a b c d e f]
+    stringified_num = (self == 0 ? "0" : "")
+    leftover = self
+    
+    while leftover > 0
+      low_digit = leftover % base
+      stringified_num += digits[low_digit]
+      leftover = (leftover - low_digit) / base
+    end
+
+    stringified_num.reverse
   end
 end
