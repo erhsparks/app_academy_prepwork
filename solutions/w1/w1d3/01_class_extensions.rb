@@ -75,18 +75,18 @@ class Fixnum
     #     self_to_s(1, 10) => {:low_digit => 1, :leftover => 0}
   end
 
-  # Iterative Solution 
+  # Iterative Solution
   def stringify_iterative(base)
     digits = %w[0 1 2 3 4 5 6 7 8 9 a b c d e f]
     stringified_num = (self == 0 ? "0" : "")
     leftover = self
-    
+
     while leftover > 0
       low_digit = leftover % base
-      stringified_num += digits[low_digit]
+      stringified_num = digits[low_digit] + stringified_num
       leftover = (leftover - low_digit) / base
     end
 
-    stringified_num.reverse
+    stringified_num
   end
 end
