@@ -7,11 +7,13 @@
 - [Objects][objects]
 - [Arrays][arrays]
 - [Strings][strings]
+- [How to Run RSpec Tests][rspec]
 
 [methods]: ./w1d1/readings/method.md
 [objects]: ./w1d1/readings/object.md
 [arrays]: ./w1d1/readings/array.md
 [strings]: ./w1d1/readings/string.md
+[rspec]: ./w1d1/readings/rspec.md
 
 #### Exercises [(Download)][w1d1-exercises]
 
