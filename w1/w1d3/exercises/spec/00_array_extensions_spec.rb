@@ -23,6 +23,15 @@ describe Array do
     it "returns a new array containing the squares of each element" do
       expect([1,2,3].square).to eq([1,4,9])
     end
+
+    it "does not modify the original array" do
+      arr = [1, 2, 3]
+      arr_dup = arr.dup
+
+      arr.square
+
+      expect(arr).to eq(arr_dup)
+    end
   end
 
   describe "#square!" do

@@ -11,9 +11,13 @@ end
 # Square
 #
 # Write an array method, `square`, that returns a new array containing the
-# squares of each element.
+# squares of each element. You should also implement a "bang!" version of this
+# method, which mutates the original array.
 
 class Array
+  def square!
+  end
+
   def square
   end
 end
