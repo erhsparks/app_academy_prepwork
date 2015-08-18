@@ -45,8 +45,8 @@ of a function early, such as in the following method:
 
 ```ruby
 def go_home
-  return unless can_go_home? && wants_to_go_home? # stops execution of
-  the function if the condition is satisfied
+  return unless can_go_home? && wants_to_go_home? 
+  # stops execution of the function if the condition is satisfied
 
   pack_bags
   get_tickets
