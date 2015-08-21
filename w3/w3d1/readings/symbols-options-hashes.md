@@ -28,22 +28,25 @@ want to generate a symbol from an input, you can call the
 `String#to_sym` method).
 
 ```ruby
+# a hash where the keys are symbols
 { :name => "Breakfast", :species => "Cat", :owner => "Devon" }
 
+# There is a simpler, more JavaScript-like syntax for the above.
+# This is the preferred way of defining hashes with symbol keys.
+{ name: "Breakfast", species: "Cat", owner: "Devon" }
+
+# a method call which passes an optional, named
+# parameter: the content type of the upload is JSON
 RestClient.post(
   "appacademy.io/applications/new",
   app.to_json,
   :content_type => :json
 )
 
+# This asks `#even?` to be called on each element
+# (more on `&`, or `to_proc` syntax, in a later chapter).
 [1, 2, 3].map(&:even?) # => [false, true, false]
 ```
-
-The first example shows a `Hash`, where the keys are `Symbol`s. The
-second shows a method call which passes an optional, **named**
-parameter: the content type of the upload is JSON. The last shows a
-call to `map` where we ask `#even?` to be called on each element
-(we'll see the `&`, or `to_proc` syntax, in a later chapter).
 
 Because `Symbol`s start with a `:`, they require one less
 character than a string to type. They also make clear the intent of
@@ -76,14 +79,14 @@ p brittle_format_url(
   "http",
   "www.google.com",
   "search",
-  { :search_query => "mitt romney, how many sons?" }
+  { search_query: "mitt romney, how many sons?" }
 )
 # => "http://www.google.com/search?search_query=mitt+romney%2C+how+many+sons%3F"
 def better_format_url(options = {})
   defaults = {
-    :scheme => "http",
-    :path => "",
-    :query_hash => {}
+    scheme: "http",
+    path: "",
+    query_hash: {}
   }
 
   # this is not modifying the original options hash
@@ -97,17 +100,17 @@ def better_format_url(options = {})
 end
 
 p better_format_url({
-  :scheme => "http",
-  :host => "www.google.com",
-  :path => "search",
-  :query_hash => {
-    :search_query => "mitt romney, how many sons?"
+  scheme: "http",
+  host: "www.google.com",
+  path: "search",
+  query_hash: {
+    search_query: "mitt romney, how many sons?"
   }
 })
 #=> "http://www.google.com/search?search_query=mitt+romney%2C+how+many+sons%3F"
 
 # rely on defaults for scheme ("http"), path ("/"), query_hash ({})
-p better_format_url({ :host => "www.nytimes.com" })
+p better_format_url({ host: "www.nytimes.com" })
 #=> "http://www.nytimes.com/?"
 ```
 
@@ -122,8 +125,8 @@ this options hash:
 
 ```Ruby
 # look Ma, no braces
-better_format(:scheme => "https", :host => "api.facebook.com")
-# equivalent to `better_format({ :scheme => "https", ... })`
+better_format(scheme: "https", host: "api.facebook.com")
+# equivalent to `better_format({ scheme: "https", ... })`
 ```
 
 Methods may take a mix of positional and optional arguments. After all
@@ -139,7 +142,7 @@ def do_something(required_arg1, required_arg2, options = {})
   # ...
 end
 
-do_something(arg1, arg2, :option1 => value1, :option2 => value2)
+do_something(arg1, arg2, option1: value1, option2: value2)
 ```
 
 Ruby methods can only take at most one options hash, and it must be
