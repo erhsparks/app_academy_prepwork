@@ -31,7 +31,7 @@ without first giving a path:
 
 ```
 ~$ touch test.rb
-~$ irb
+~$ pry
 [1] pry(main)> require 'test'
 LoadError: cannot load such file -- test
         from: /Users/ruggeri/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/site_ruby/1.9.1/rubygems/custom_require.rb:36:in `require'
@@ -48,7 +48,7 @@ You may notice that changes in re-`require`ing code in the REPL won't
 reload the library:
 
 ```
-~$ irb
+~$ pry
 [1] pry(main)> require './test'
 => true
 [2] pry(main)> require './test' # won't reload
