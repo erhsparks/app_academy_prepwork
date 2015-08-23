@@ -18,7 +18,7 @@ Once your code is in files, you will want to be able to load them. Use
 the `require` method:
 
 ```
-~$ irb
+~$ pry
 [1] pry(main)> require 'set'
 => true
 [2] pry(main)> Set.new([1, 2, 3]) # lets me use the `Set` class
