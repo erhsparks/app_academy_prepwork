@@ -36,7 +36,8 @@ describe "Extras" do
   describe "Student#enroll" do
     it "raises an error if course conflicts with already enrolled course" do
       student = Student.new("Johnny", "Rocket")
-      allow(student).to receive(:courses).and_return([drama, ruby])
+      student.enroll(drama)
+      student.enroll(ruby)
 
       expect { student.enroll(python) }.to raise_error
     end
