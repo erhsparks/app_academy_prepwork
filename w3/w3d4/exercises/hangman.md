@@ -30,9 +30,7 @@ shouldn't trust giving the word to the computer.
 The computer should, using its dictionary, start guessing. The human
 should tell the computer the positions (if any) where the guessed
 letter occurs. While you're getting this interaction working, you can
-have the computer temporarily guess random letters. Make sure to
-request a code review from your TA before you move on and improve your
-AI.
+have the computer temporarily guess random letters.
 
 Make sure your game class (probably named `Hangman`) doesn't do too
 much. You should have `HumanPlayer` and `ComputerPlayer` classes; they
