@@ -13,7 +13,7 @@ class XmlDocument
   attr_reader :indent_depth
 
   def attribute_strings(attrs)
-    attrs.map { |key, val| "#{key}='#{val}'" }
+    attrs.map { |key, val| "#{key}=\"#{val}\"" }
   end
 
   def closing_tag(name)
