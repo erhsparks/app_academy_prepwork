@@ -6,8 +6,7 @@ Out-of-date programmer Ollie uses Ruby 1.9.
 
 Ollie is coding one day in an old project and realizes there's a really cool method he wants to use (for example, [#to_h][#to_h] to turn an object into a hash).
 
-But Ruby 1.9 doesn't have #to_h!  
-Ruby 2.0 has #to_h.
+But Ruby 1.9 doesn't have #to_h!  Ruby 2.0 has #to_h.
 
 Wouldn't it be great if Ollie could switch between ruby versions easily?  What if Ollie has tons of different projects using different ruby versions?
 
