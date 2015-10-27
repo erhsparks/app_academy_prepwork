@@ -1,6 +1,6 @@
-### Installing rbenv
+##Installing rbenv
 
-## Why version control Ruby?
+### Why version control Ruby?
 
 Out-of-date programmer Ollie uses Ruby 1.9.
 
@@ -12,19 +12,19 @@ Wouldn't it be great if Ollie could switch between ruby versions easily?  What i
 
 [#to_h]: http://ruby-doc.org/core-2.0.0/Struct.html#method-i-to_h
 
-## Enter Rbenv
+### Enter Rbenv
 [RBenv][RBenv] keeps track of which version of Ruby you're using.
 
 [RBenv]: https://github.com/sstephenson/rbenv
 
-For Windows:
+## For Windows:
 
-- You're out of luck--there's no RBenv.  Try following the "Windows Systems" instructions for [uru][uru].  *The views and opinions expressed in this article are those of the authors and do not
-reflect the opinions of App Academy, Major League Baseball, the U.S. government, or any of its subsidiaries.  If you develop ruby apps in Windows, you will experience much pain.  And we don't have any tylenol for you.*
+- You're out of luck--there's no RBenv.  Try following the "Windows Systems" instructions for [uru][uru].  *<sub><sup>The views and opinions expressed in this article are those of the authors and do not
+reflect the opinions of App Academy, Major League Baseball, the U.S. government, or any of its subsidiaries.  If you develop ruby apps in Windows, you will experience much pain.  And we don't have any tylenol for you.</sub></sup>*
 
 [uru]: https://bitbucket.org/jonforums/uru
 
-For Mac OS X:
+### For Mac OS X:
 
 1.  Open terminal
 2.  Copy, paste, and run the following, one line at a time:
