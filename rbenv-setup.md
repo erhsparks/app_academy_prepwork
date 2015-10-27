@@ -17,7 +17,7 @@ Wouldn't it be great if Ollie could switch between ruby versions easily?  What i
 
 [RBenv]: https://github.com/sstephenson/rbenv
 
-## For Windows:
+### For Windows:
 
 - You're out of luck--there's no RBenv.  Try following the "Windows Systems" instructions for [uru][uru].  *<sub><sup>The views and opinions expressed in this article are those of the authors and do not
 reflect the opinions of App Academy, Major League Baseball, the U.S. government, or any of its subsidiaries.  If you develop ruby apps in Windows, you will experience much pain.  And we don't have any tylenol for you.</sub></sup>*
