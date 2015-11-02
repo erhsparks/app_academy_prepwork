@@ -36,10 +36,12 @@ how well people are keeping up with the material.
 
 App Academy Prep will span four weeks. You will be expected to do
 readings and complete coding exercises each weeknight. We expect this
-work to take about 2-3 hours for most students. During office hours
-(6pm-8pm PDT), TAs will be available on the [App Academy
-Slack][app-academy-slack] organization to take questions and provide
-assistance.
+work to take about 2-3 hours for most students. During office hours, TAs 
+will be available on the [App Academy Slack][app-academy-slack] organization 
+to take questions and provide assistance.
+
+- SF Cohorts Office Hours: (6pm-8pm PDT)
+- NY Cohorts Office Hours: (6pm-7pm EDT)
 
 [app-academy-slack]: https://app-academy.slack.com/
 
