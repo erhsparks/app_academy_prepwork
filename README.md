@@ -41,7 +41,7 @@ will be available on the [App Academy Slack][app-academy-slack] organization
 to take questions and provide assistance.
 
 - SF Cohorts Office Hours: (6pm-8pm PDT)
-- NY Cohorts Office Hours: (6pm-7pm EDT)
+- NY Cohorts Office Hours: (6pm-7pm && 9pm-10pm EDT)
 
 [app-academy-slack]: https://app-academy.slack.com/
 
