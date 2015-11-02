@@ -40,8 +40,8 @@ work to take about 2-3 hours for most students. During office hours, TAs
 will be available on the [App Academy Slack][app-academy-slack] organization 
 to take questions and provide assistance.
 
-- SF Cohorts Office Hours: (6pm-8pm PDT)
-- NY Cohorts Office Hours: (6pm-7pm && 9pm-10pm EDT)
+- SF Cohorts Office Hours: (6pm-8pm PT)
+- NY Cohorts Office Hours: (6pm-7pm && 9pm-10pm ET)
 
 [app-academy-slack]: https://app-academy.slack.com/
 
