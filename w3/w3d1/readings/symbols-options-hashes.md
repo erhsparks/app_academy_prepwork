@@ -85,7 +85,7 @@ p brittle_format_url(
 def better_format_url(options = {})
   defaults = {
     scheme: "http",
-    path: "",
+    path: "/",
     query_hash: {}
   }
 
