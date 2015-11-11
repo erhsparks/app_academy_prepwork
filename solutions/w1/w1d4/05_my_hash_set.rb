@@ -1,4 +1,6 @@
 class MyHashSet
+  attr_reader :store
+
   def initialize
     @store = {}
   end
@@ -43,7 +45,4 @@ class MyHashSet
     end
     new_set
   end
-
-  protected
-  attr_reader :store
 end
