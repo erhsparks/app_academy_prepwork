@@ -81,7 +81,7 @@
 [coding-style]: ./w1d5/readings/coding-style.md
 [ruby-styleguide]: https://github.com/styleguide/ruby
 [dry]: ./w1d5/readings/dry.md
-[method-decomposition]: ./w1d5/readings/metohod-decomposition.md
+[method-decomposition]: ./w1d5/readings/method-decomposition.md
 [naming]: ./w1d5/readings/naming.md
 [refactoring-reading]: ./w1d5/readings/refactoring.md
 [debugging-reading]: ./w1d5/readings/debugger.md
