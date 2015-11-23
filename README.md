@@ -13,6 +13,9 @@ fundamentals of Ruby programming. TAs will hold office hours on
 Monday-Thursday evenings; during that time, you have their undivided
 attention. Take advantage of this resource and ask questions!
 
+While you do not need to submit your prep work for review, we expect
+ students to complete the full prep course before class begins.
+
 ### Important Links: you MUST review all of the information covered here.
 
 * [Machine Setup][machine-setup]
