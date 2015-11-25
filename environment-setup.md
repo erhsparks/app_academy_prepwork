@@ -29,17 +29,17 @@ The minimum requirements are:
 ### Slack
 
 Slack is a chat client similar to IRC. It supports public and private
-channels, direct messages, formatted code blocks, and more. Slack is
-our go-to app for team communication, and it will be your best bet for
-chatting with classmates and getting assistance from TAs. You should
-either install the desktop client, or bookmark the web version. You can
-type `code snippets` by surrounding text in \`backticks\`. You can also
-open and close multi-line code blocks like this:
+channels, direct messages, formatted code blocks, and more. We will add
+you to the [App Academy Prep Slack Team][aa-prep-slack]. This will be
+your best bet for chatting with classmates and getting assistance from
+TAs. This is also where TAs will hang out during "office hours". You
+should either install the desktop client, or bookmark the web version.
+
+You can type `code snippets` by surrounding text in \`backticks\`. You
+can also open and close multi-line code blocks like this:
 
     ```
     # your code goes here
     ```
 
-* [App Academy Slack Organization][aa-slack]
-
-[aa-slack]: https://app-academy.slack.com/
+[aa-prep-slack]: https://app-academy-prep.slack.com/
