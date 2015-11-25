@@ -35,8 +35,6 @@ how well people are keeping up with the material.
 
 ## Schedule
 
-### Programming Exercises
-
 App Academy Prep will span four weeks. You will be expected to do
 readings and complete coding exercises each weeknight. We expect this
 work to take about 2-3 hours for most students. During office hours, TAs 
@@ -44,20 +42,6 @@ will be available on the [App Academy Slack][app-academy-slack] organization
 to take questions and provide assistance.
 
 - SF Cohorts Office Hours: (6pm-8pm PT)
-- NY Cohorts Office Hours: (6pm-7pm && 9pm-10pm ET)
+- NY Cohorts Office Hours: (6pm-8pm ET)
 
 [app-academy-slack]: https://app-academy.slack.com/
-
-### Assessment 0
-
-After going through the preparatory curriculum, students will take
-Assessment 0, a sort of "dry run" of the assessments we will administer
-throughout the course (nicknamed a01 through a06). We use the assessment
-results to identify students who have fallen behind, and for whom App
-Academy may not be the best environment. Your a00 performance won't be
-used as a criterion to single out or dismiss you; but you can expect it
-to paint a reliable picture of the difficulty of the class. If you want
-to prepare yourself to start App Academy on the right foot (and you
-should), then plan to re-take the assessment on your own until you feel
-comfortable with the material and can complete it well within the time
-limit.
