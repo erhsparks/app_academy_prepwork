@@ -13,8 +13,19 @@ fundamentals of Ruby programming. TAs will hold office hours on
 Monday-Thursday evenings; during that time, you have their undivided
 attention. Take advantage of this resource and ask questions!
 
-While you do not need to submit your prep work for review, we expect
- students to complete the full prep course before class begins.
+The purpose of the prep course is to make sure everyone is up-to-speed
+on Ruby and basic programming concepts before your cohort begins, that
+way we can hit the ground running from day 1. You do not need to submit
+your prep work for review, but we expect all students to complete the
+full prep course before their cohort begins.
+
+There will be assessments throughout the course, and some of them will
+test you on material from the prep-course, so be prepared. Students can
+be dismissed for failing more than one assessment. The first of one
+however, will **not** count against you if you fail it. It will take
+place the first day of class and you should use it to assess your own
+understanding of the material and to help prepare for future
+assessments.
 
 ### Important Links: you MUST review all of the information covered here.
 
@@ -37,9 +48,9 @@ how well people are keeping up with the material.
 
 App Academy Prep will span four weeks. You will be expected to do
 readings and complete coding exercises each weeknight. We expect this
-work to take about 2-3 hours for most students. During office hours, TAs 
-will be available on the [App Academy Slack][app-academy-slack] organization 
-to take questions and provide assistance.
+work to take about 2-3 hours for most students. During office hours, TAs
+will be available on the [App Academy Slack][app-academy-slack]
+organization  to take questions and provide assistance.
 
 - SF Cohorts Office Hours: (6pm-8pm PT)
 - NY Cohorts Office Hours: (6pm-8pm ET)
