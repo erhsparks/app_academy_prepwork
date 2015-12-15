@@ -1,0 +1,4 @@
+--color
+--format documentation
+--default-path ../../../w2/w2d2/exercises/spec
+-I .
