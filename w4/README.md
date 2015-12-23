@@ -1,6 +1,7 @@
-# Week 4: Basic Rails and Assessment Prep
+# Week 4: Resume, Basic Rails, and Assessment Prep
 
-### Resume Writing: [Prepare your Resume][resume] *(Make sure you send this to us before your first day!)*
+### Resume Writing: [Prepare your Resume][resume] 
+###### *(Make sure you send this to us before your first day!)*
 ### Solo Project: [Jumpstart Blogger][jumpstart-blogger]
 
 [resume]: resume/README.md
