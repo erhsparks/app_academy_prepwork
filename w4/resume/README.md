@@ -13,15 +13,17 @@ resume. Don't worry if it's not perfect. We'll perfect it once we get to
 the job search curriculum.
 
 **Once you're done with your resume, e-mail it as an attachment to
-`prepwork-resumes@appacademy.io`.** We must have your resume on file before you
-come in on the first day!
+`prepwork-resumes@appacademy.io`**, with the subject as your name (first name, last name). 
+
+##### We must have your resume on file before you come in on the first day!
 
 Right now, don't expect your resume to be complete. A tech resume generally has
 four parts: *projects*, *education*, *work experience* and *skills* (or
 technologies/languages). Of course, you don't have your projects yet. You'll
-have them once you complete the course. **For now, just use empty bullet points
-for your projects and their details.** This will be useful in limiting you to a
-realistic amount of space for everything else.
+have them once you complete the course. 
+
+**For now, just use empty bullet points for your projects and their details.** This 
+will be useful in limiting you to a realistic amount of space for everything else.
 
 You don't have your skills yet either of course, but we'll tell you in the
 a later section exactly what skills to list. (If you have prior *programming*
