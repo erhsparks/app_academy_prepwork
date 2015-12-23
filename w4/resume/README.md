@@ -15,7 +15,7 @@ the job search curriculum.
 **Once you're done with your resume, e-mail it as an attachment to
 `prepwork-resumes@appacademy.io`**, with the subject as your name (first name, last name). 
 
-##### We must have your resume on file before you come in on the first day!
+#### We must have your resume on file before you come in on the first day!
 
 Right now, don't expect your resume to be complete. A tech resume generally has
 four parts: *projects*, *education*, *work experience* and *skills* (or
