@@ -1,4 +1,4 @@
-# Week 4: Resume, Basic Rails, and Assessment Prep
+# Week 4: Resume and Basic Rails
 
 ### Resume Writing: [Prepare your Resume][resume] 
 ###### *(Make sure you send this to us before your first day!)*
