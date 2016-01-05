@@ -15,9 +15,12 @@ attention. Take advantage of this resource and ask questions!
 
 The purpose of the prep course is to make sure everyone is up-to-speed
 on Ruby and basic programming concepts before your cohort begins, that
-way we can hit the ground running from day 1. You do not need to submit
-your prep work for review, but we expect all students to complete the
-full prep course before their cohort begins.
+way we can hit the ground running from day 1. If you've been accepted,
+you do not need to submit your prep work for review, but we expect all
+students to complete the full prep course before their cohort begins.
+
+*Note: If you've been conditionally accepted, you must submit the prep
+work to us before you can schedule your final interview!*
 
 There will be assessments throughout the course, and some of them will
 test you on material from the prep-course, so be prepared. Students can

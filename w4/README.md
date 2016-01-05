@@ -1,7 +1,9 @@
 # Week 4: Resume and Basic Rails
 
-### Resume Writing: [Prepare your Resume][resume] 
+### Resume Writing: [Prepare your Resume][resume]
 ###### *(Make sure you send this to us before your first day!)*
+(If you've been conditionally accepted, this is not required yet.)
+
 ### Solo Project: [Jumpstart Blogger][jumpstart-blogger]
 
 [resume]: resume/README.md

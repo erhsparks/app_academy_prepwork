@@ -1,9 +1,9 @@
 # Workflow
 
 ### Step 1: Do the Readings
-* Read the day's readings before starting the assignment. Instructions
-  for the day's exercises may not be available ahead of time; but
-  if they are, you should read those too.
+Read the day's readings before starting the assignment. Instructions
+for the day's exercises may not be available ahead of time; but
+if they are, you should read those too.
 
 ### Step 2: Complete the Exercises
 Work through the exercises and projects in the order presented. Don't
