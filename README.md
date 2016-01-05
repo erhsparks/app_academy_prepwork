@@ -21,11 +21,10 @@ full prep course before their cohort begins.
 
 There will be assessments throughout the course, and some of them will
 test you on material from the prep-course, so be prepared. Students can
-be dismissed for failing more than one assessment. The first of one
-however, will **not** count against you if you fail it. It will take
-place the first day of class and you should use it to assess your own
-understanding of the material and to help prepare for future
-assessments.
+be dismissed for failing more than one assessment. On the first day of
+class you will take a preliminary assessment. It will **not** count
+against you if you fail it, but you should use it to assess your own
+understanding of the material and to help prepare for future assessments.
 
 ### Important Links: you MUST review all of the information covered here.
 
