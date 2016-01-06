@@ -206,7 +206,7 @@ Now that we've broken the code up into testable bits, let's actually
 test those parts. That lets us quickly isolate the problem to a few
 lines.
 
-Open the Pry REPL. Make sure you have done `gem install pry` first.
+Open the [Pry REPL](http://www.pryrepl.org). Make sure you have done `gem install pry` first.
 
 ```bash
 david ~/Dropbox/TA $
@@ -714,12 +714,5 @@ When a bug is discovered, good practice is to write a new test that
 verifies we don't make that mistake again.
 
 ## Resources
-
-* Read this -> [sitepoint][sitepoint]
-* Pivotal Labs [cheatsheet][cheatsheet].
-* Comprehensive (very long) [debugger documentation][debugger-documentation]
-
+[Pry](http://www.pryrepl.org)
 [neo]: http://img1.wikia.nocookie.net/__cb20131002032735/matrix/images/b/b5/Matrix-neo-stops-bullets-wallpaper.jpg
-[cheatsheet]: http://pivotallabs.com/ruby-debug-in-30-seconds-we-don-t-need-no-stinkin-gui/
-[debugger-documentation]: http://bashdb.sourceforge.net/ruby-debug.html
-[sitepoint]: http://www.sitepoint.com/rubyists-time-pry-irb/
