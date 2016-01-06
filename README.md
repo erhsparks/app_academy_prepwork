@@ -13,9 +13,9 @@
 
 Welcome to the App Academy Prep Course! This is a short, part-time
 course covering the fundamentals of Ruby programming. Its purpose is to
-make sure everyone is up-to-speed before your cohort begins, that way we
-can hit the ground running from day 1. You will need to complete and
-submit their work before your cohort begins.
+make sure everyone is up-to-speed on day 1, that way we can hit the
+ground running immediately. You will need to complete and submit your
+work before your cohort begins.
 
 Please read through ***all*** of the material below.
 
