@@ -2,8 +2,7 @@
 
 ## Quick Links
 
-* [Readings](#readings)
-* [Exercises](#exercises)
+* [Assignments](#assignments)
 * [Daily Workflow][workflow]
 * [Daily Feedback Form][feedback-form-ny-2016-02-08]
 
@@ -25,10 +24,13 @@ Please read through ***all*** of the material below.
 This course designed to be completed part-time, online, while you are
 employed and should require 15-20 hours a week for 4 weeks to complete.
 
-The curriculum is organized into 2-3 hours of [readings and
-exercises](#exercises) to be completed each weeknight.  There is also a
-separate [list of readings](#readings) that must be completed by the end
-of the course.
+The curriculum is organized into 4 weeks of readings and exercises to be
+completed each weeknight. This should require 2-3 hours per day of
+material.
+
+Before this, however, there is another set of assignments labeled
+"week0". These are some introductory readings and tasks that will need
+to be completed before you move on to week 1.
 
 Ideally, you will complete this in the 5-weeknights-for-4-weeks schedule
 we have designed, but we recognize that many of your schedules do not
@@ -82,31 +84,10 @@ assessment; it will **not** count against you if you fail it, but you
 should use it to assess your own understanding of the material and to
 help prepare for future assessments.
 
-## Readings
+## Assignments
 
-- Peter Cooper's [Beginning Ruby][beginning-ruby]
-  - Your primary resource for learning Ruby.
-  - ch1-4
-  - ch6 (skip ch5)
-  - Just RubyGems (pg. 168-175 in the second edition) from ch7
-  - Just Testing (pg. 192-196 in the second edition) from ch8
-- JumpstartLabs' [Ruby in 100 Minutes][jumpstart-ruby]
-  - Another intro to Ruby with a lot of good intro exercises.
-- Chris Pine's [Learn to Program][learn-to-program]
-  - ch1-ch10.
-  - There are a few exercises at the end of each chapter under the
-    heading, "A Few Things to Try". Do these for practice, but you
-    don't have to submit them to us.
-- Ruby Monk's [Ruby Primer][ruby-monk]
-  - An interactive introduction to Ruby.
-
-## Exercises
-
-- [Machine Setup][machine-setup]
 - [Week 0](./w0/)
 - [Week 1](./w1/)
 - [Week 2](./w2/)
 - [Week 3](./w3/)
 - [Week 4](./w4/)
-
-[machine-setup]: ./environment-setup.md
