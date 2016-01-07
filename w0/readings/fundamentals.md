@@ -7,7 +7,7 @@ trade.
 
 The skills outlined in this document are not optional. Developing
 them will make you a faster, more efficient programmer. You will
-be able towrite more code, debug faster, and study smarter. Students
+be able to write more code, debug faster, and study smarter. Students
 who hone these skills before the course begins are at a huge advantage.
 
 ## Keyboard

@@ -1,4 +1,4 @@
-# Workflow
+# Daily Workflow
 
 ### Step 1: Do the Readings
 Read the day's readings before starting the assignment. Instructions
@@ -36,5 +36,4 @@ personal effort.
 At the end of each day, you will be asked to give feedback on the
 organization of the material and the effectiveness of instruction. Since
 this part of the course is still in beta, we're still working to
-fine-tune it. Please let us know what works well and what could be
-improved!
+fine-tune it. Please fill out the feedback form to help us do this. Thanks!
