@@ -59,11 +59,13 @@ App Academy TAs will hold office hours in the [#general slack
 channel][slack-general-channel] on Monday-Thursday evenings during the
 weeks leading up to each cohort. During that time, you have their
 undivided attention, so take advantage of this and ask questions!
+Make sure you take a look at the [office hours etiquette][office-hours-etiquette].
 
 - SF Cohorts Office Hours: (6pm-8pm PT)
 - NY Cohorts Office Hours: (6pm-8pm ET)
 
 [slack-general-channel]: https://app-academy-prep.slack.com/messages/general/details/
+[office-hours-etiquette]: ./office-hours-etiquette.md
 
 ## Prepwork Submission
 
