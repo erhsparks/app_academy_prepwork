@@ -12,17 +12,18 @@ Read this document in its entirety, and then set about to making your own
 resume. Don't worry if it's not perfect. We'll perfect it once we get to
 the job search curriculum.
 
-**Once you're done with your resume, e-mail it as an attachment to
-`prepwork-resumes@appacademy.io`**, with the subject as your name (first name, last name). 
+**Once you're done with your resume, include it in the prepwork.zip file
+that you send to us!`**, with the filename as your first and last name
+(i.e., sally_jones.pdf).
 
 #### We must have your resume on file before you come in on the first day!
 
 Right now, don't expect your resume to be complete. A tech resume generally has
 four parts: *projects*, *education*, *work experience* and *skills* (or
 technologies/languages). Of course, you don't have your projects yet. You'll
-have them once you complete the course. 
+have them once you complete the course.
 
-**For now, just use empty bullet points for your projects and their details.** This 
+**For now, just use empty bullet points for your projects and their details.** This
 will be useful in limiting you to a realistic amount of space for everything else.
 
 You don't have your skills yet either of course, but we'll tell you in the

@@ -56,13 +56,13 @@ resource, so please use it.
 ## Office Hours
 
 App Academy TAs will hold office hours in the [#general slack
-channel][slack-general-channel] on Monday-Thursday evenings during the
-weeks leading up to each cohort. During that time, you have their
-undivided attention, so take advantage of this and ask questions!
-Make sure you take a look at the [office hours etiquette][office-hours-etiquette].
+channel][slack-general-channel] on every Monday-Friday evening from
+6PM to 7PM PST. During that time, you have their undivided attention,
+so take advantage of  this and ask questions! Make sure you take a look
+at the [office hours etiquette][office-hours-etiquette].
 
-- SF Cohorts Office Hours: (6pm-8pm PT)
-- NY Cohorts Office Hours: (6pm-8pm ET)
+- SF Cohorts Office Hours: (6pm-7pm PT)
+- NY Cohorts Office Hours: (6pm-7pm ET)
 
 [slack-general-channel]: https://app-academy-prep.slack.com/messages/general/details/
 [office-hours-etiquette]: ./office-hours-etiquette.md
@@ -71,7 +71,7 @@ Make sure you take a look at the [office hours etiquette][office-hours-etiquette
 
 You will be required to submit your completed prepwork before your
 cohort begins. Once you are finished, please zip up the files and email
-them to  the zipfile (`.zip`) to **admin@appacademy.io** with the
+them to the zipfile (`.zip`) to **admin@appacademy.io** with the
 subject line "`completed prepwork`". This file should include your
 _résumé_.
 
