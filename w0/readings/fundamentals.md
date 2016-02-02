@@ -23,6 +23,7 @@ primary goal is accuracy. Speed will come naturally with time.
 **DO NOT** look at the keyboard while you type.
 
 - [typing.io](https://www.typing.io): Free, designed for programmers. Start with the 'Ruby on Rails' exercises.
+- [keybr](http://www.keybr.com/#!practice): General touch typing practice 
 
 ## Command Line
 
