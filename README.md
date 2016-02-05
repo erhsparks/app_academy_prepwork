@@ -40,30 +40,31 @@ complete, whether you complete it in a single session, multiple
 sessions, or crush through 2 or 3 "day"s in one huge Saturday cram
 session.
 
-## Slack
+## Piazza
+
+[Piazza][piazza] is a question and answer forum geared towards
+classrooms. This will be an invaluable resource for you and your primary
+place to go for help, whether from App Academy TAs or fellow students
+who have already struggled through the problem you're stuck on. Someone
+will have an answer.
+
+[piazza]: https://piazza.com/appacademy.io/spring2016/aa101/home
+
+## Office Hours
 
 You should have received an invite to join the [Prep Course Slack
 team][prep-course-slack]. If you did not receive an invite, please email
 admin@appacademy.io and we will add you.
 
-Slack is a live chat app, and this will be your primary place to go for
-help, whether from App Academy TAs or fellow students who have already
-struggled through the problem you're stuck on. This is an invaluable
-resource, so please use it.
+App Academy TAs will hold office hours in the [#general slack
+channel][slack-general-channel] every weeknight from 6PM to 7PM PST.
+During that time, you have their undivided attention, so take advantage
+of this and ask questions!
+
+* Jan 11 - Feb 5, 3pm-4pm PT (6-7pm ET)
+* Feb 8 - Mar 4, 6pm-7pm PT (9-10pm ET)
 
 [prep-course-slack]: https://app-academy-prep.slack.com/
-
-## Office Hours
-
-App Academy TAs will hold office hours in the [#general slack
-channel][slack-general-channel] on every Monday-Friday evening from
-6PM to 7PM PST. During that time, you have their undivided attention,
-so take advantage of  this and ask questions! Make sure you take a look
-at the [office hours etiquette][office-hours-etiquette].
-
-- SF Cohorts Office Hours: (6pm-7pm PT)
-- NY Cohorts Office Hours: (6pm-7pm ET)
-
 [slack-general-channel]: https://app-academy-prep.slack.com/messages/general/details/
 [office-hours-etiquette]: ./office-hours-etiquette.md
 
@@ -71,9 +72,8 @@ at the [office hours etiquette][office-hours-etiquette].
 
 You will be required to submit your completed prepwork before your
 cohort begins. Once you are finished, please zip up the files and email
-them to the zipfile (`.zip`) to **admin@appacademy.io** with the
-subject line "`completed prepwork`". This file should include your
-_résumé_.
+the zipfile (`.zip`) to **admin@appacademy.io** with the subject line
+"`completed prepwork`". This file should include your _résumé_.
 
 **NB:** If you've been _conditionally accepted_, you must submit the
 prep work to us before you can schedule your final interview!
