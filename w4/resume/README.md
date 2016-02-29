@@ -13,7 +13,7 @@ resume. Don't worry if it's not perfect. We'll perfect it once we get to
 the job search curriculum.
 
 **Once you're done with your resume, include it in the prepwork.zip file
-that you send to us!`**, with the filename as your first and last name
+that you send to us!**, with the filename as your first and last name
 (i.e., sally_jones.pdf).
 
 #### We must have your resume on file before you come in on the first day!
@@ -42,17 +42,15 @@ do not like seeing similar résumés.
 
 Here are some example resumes from previous students:
 
-* [Eli Smukler][eli-smukler-resume]
-* [Carl Baron][carl-baron-resume]
+* [Ami Hays][ami-hays-resume]
 * [Dean Hu][dean-hu-resume]
-* [Greg Kane][greg-kane-resume]
+* [Edmund Li][edmund-li-resume]
 
 [glm-résumé]: http://www.careercup.com/resume
 [cracking-interview]: http://www.crackingthecodinginterview.com/
-[eli-smukler-resume]: ./eli_smukler-resume.pdf
-[carl-baron-resume]: ./carl_baron-resume.pdf
+[ami-hays-resume]: ./ami_hays_resume.pdf
 [dean-hu-resume]: ./dean_hu-resume.pdf
-[greg-kane-resume]: ./greg_kane-resume.pdf
+[edmund-li-resume]: ./edmund_li_resume.pdf
 [drive-templates]: https://drive.google.com/open?id=0B3noREts_wUyMFZHWVhvcUUtU1E&authuser=0
 [json-resume]: ./json_resume.md
 
