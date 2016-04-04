@@ -37,7 +37,7 @@ reflect the opinions of App Academy, Major League Baseball, the U.S. government,
   - `brew install rbenv`
   - `brew install ruby-build`
 4. Copy, paste, and run:
-  - `open ~/.bash_profile`
+  - `atom ~/.bash_profile`
 5. In the text editor:
   - Search (command+F) for "rvm", and delete any lines that have it.
   - Copy and paste the following at the bottom:
