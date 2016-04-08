@@ -11,13 +11,20 @@
 
 ## Summary
 
-Welcome to the App Academy Prep Course! This is a short, part-time
-course covering the fundamentals of Ruby programming. Its purpose is to
-make sure everyone is up-to-speed on day 1, that way we can hit the
-ground running immediately. You will need to complete and submit your
-work before your cohort begins.
+The App Academy program is very fast-paced. If you don't have a certain
+level of familiarity with programming in Ruby when you start the course
+(usually 60-100hrs of practice), you will be playing catch-up for the
+entire program. Some students can pull this off, but most can't and
+several students have had to leave the program as a result.
 
-Please read through ***all*** of the material below.
+For this reason, we created this short, part-time prep course covering
+the fundamentals of Ruby programming. Its purpose is to make sure
+everyone is up-to-speed on day 1 so that we can hit the ground running
+immediately. You will need to complete and submit your work before your
+cohort begins.
+
+The information in this syllabus is important to your success in the
+Prep Course and beyond, so please read it carefully.
 
 ## Schedule
 
