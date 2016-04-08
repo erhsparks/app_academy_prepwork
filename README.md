@@ -59,19 +59,28 @@ will have an answer.
 
 ## Slack
 
-You should have received an invite to join the [Prep Course Slack
-team][prep-course-slack]. If you did not receive an invite, please email
-admin@appacademy.io and we will add you.
+Slack is a chat client similar to IRC. It supports public and private
+channels, direct messages, formatted code blocks, and more. You should
+have received an invite to join the [App Academy Prep Slack
+Team][prep-course-slack]. If you did not receive an invite, please email
+admin@appacademy.io and we will add you. You should either install the
+desktop client, or bookmark the web version.
 
-Slack is a real-time chat service where you can talk with your fellow
-classmates about the prep work and help each other out on the tougher
-concepts. You're all doing the prep work together, so if you're
-struggling to wrap your head around something, your cohort-mates will
-usually be willing to explain what they understand. The reverse also
-holds: sometimes you'll be the one who understands a concept that
-someone else is having trouble with. You're encouraged to try to explain
-it as this is a great learning opportunity for both you and the other
-student.
+You can use Slack to talk with your fellow classmates about the prep
+work and help each other out on the tougher concepts. You're all doing
+the prep work together, so if you're struggling to wrap your head around
+something, your cohort-mates will usually be willing to explain what
+they understand. The reverse also holds: sometimes you'll be the one who
+understands a concept that someone else is having trouble with. You're
+encouraged to try to explain it as this is a great learning opportunity
+for both you and the other student.
+
+You can type `code snippets` by surrounding text in \`backticks\`. You
+can also open and close multi-line code blocks like this:
+
+    ```
+    # your code goes here
+    ```
 
 [prep-course-slack]: https://app-academy-prep.slack.com/
 
