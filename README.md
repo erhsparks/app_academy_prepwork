@@ -50,23 +50,23 @@ will have an answer.
 
 [piazza]: https://piazza.com/appacademy.io/spring2016/aa101/home
 
-## Office Hours
+## Slack
 
 You should have received an invite to join the [Prep Course Slack
 team][prep-course-slack]. If you did not receive an invite, please email
 admin@appacademy.io and we will add you.
 
-App Academy TAs will hold office hours in the [#general slack
-channel][slack-general-channel] every weeknight from 6PM to 7PM PST.
-During that time, you have their undivided attention, so take advantage
-of this and ask questions!
-
-* Jan 11 - Feb 5, 3pm-4pm PT (6-7pm ET)
-* Feb 8 - Mar 4, 6pm-7pm PT (9-10pm ET)
+Slack is a real-time chat service where you can talk with your fellow
+classmates about the prep work and help each other out on the tougher
+concepts. You're all doing the prep work together, so if you're
+struggling to wrap your head around something, your cohort-mates will
+usually be willing to explain what they understand. The reverse also
+holds: sometimes you'll be the one who understands a concept that
+someone else is having trouble with. You're encouraged to try to explain
+it as this is a great learning opportunity for both you and the other
+student.
 
 [prep-course-slack]: https://app-academy-prep.slack.com/
-[slack-general-channel]: https://app-academy-prep.slack.com/messages/general/details/
-[office-hours-etiquette]: ./office-hours-etiquette.md
 
 ## Prepwork Submission
 
