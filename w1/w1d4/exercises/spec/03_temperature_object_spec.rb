@@ -95,7 +95,16 @@ describe Temperature do
   #
   # run *all* the tests during your refactoring, to make sure you did it right
   #
+
+  # **I called them f_to_c and c_to_f because easier to read**
   describe "utility class methods" do
+    it "can convert a given fahrenheit temperature to celsius" do
+      expect(Temperature.new(f: 32).f_to_c).to eq(0)
+    end
+    
+    it "can convert a given celsius temperature to fahrenheit" do
+      expect(Temperature.new(c: 100).c_to_f).to eq(212)
+    end
   end
 
   # Here's another way to solve the problem!

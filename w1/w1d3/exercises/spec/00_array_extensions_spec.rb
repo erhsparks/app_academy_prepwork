@@ -131,6 +131,21 @@ describe Array do
 
       arr.my_transpose
     end
+
+    # bonus problem: rectangular matrices:
+    let(:rect_arr) { [
+      [1, 2, 3],
+      [4, 5, 6]
+    ] }
+
+    it "transposes a non_square matrix" do
+      expect(rect_arr.my_transpose).to eq([
+        [1, 4],
+        [2, 5],
+        [3, 6]
+      ])
+    end
+
   end
 
   describe "#median" do

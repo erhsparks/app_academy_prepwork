@@ -68,7 +68,25 @@ describe "#translate" do
     expect(s).to eq("ethay ickquay ownbray oxfay")
   end
 
+  it "can handle all consonants" do
+    s = translate("tht qck brn fwfptp")
+    expect(s).to eq("httay ckqay rnbay wfptpfay") # these are clearly not real words, I just want to be sure the code can handle errors
+  end
+
   # Test-driving bonus:
   # * write a test asserting that capitalized words are still capitalized (but with a different initial capital letter, of course)
   # * retain the punctuation from the original phrase
+
+  it "is totally cool with captial letters" do
+    s = translate("The Quick Brown but not allcaps Fox")
+    expect(s).to eq("Ethay Ickquay Ownbray utbay otnay allcapsay Oxfay")
+  end
+
+  it "can deal with punctuation" do
+    s = translate("the great, big, purple... man-eating fox!? ??!?")
+    expect(s).to eq("ethay eatgray, igbay, urplepay... an-eatingmay oxfay!? ??!?")
+  end
+
+
+
 end

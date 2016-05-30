@@ -1,3 +1,26 @@
+#!/usr/bin/env ruby
+
+# -------------------------------------------------------
+# 02_eval_block.rb - Lizzi Sparks - May 2016
+#
+# Methods:
+# - `eval_block(some number of arguments) { block }` :
+# calls `block`, passing in arguments. If no block given,
+# raises an error telling the user so.
+# 
+# -------------------------------------------------------
+
+def eval_block(*args, &block)
+  raise "NO BLOCK GIVEN!" if block.nil?
+
+  block.call(*args)
+end
+
+
+
+
+#Instructions:
+
 # ### `eval_block`
 #
 # Write an `eval_block` method that takes some arguments and a block. It should

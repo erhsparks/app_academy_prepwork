@@ -1,3 +1,110 @@
+#!/usr/bin/env ruby
+
+# -------------------------------------------------------
+# 01_class_extensions.rb - Lizzi Sparks - May 2016
+#
+# Methods:
+# - `String#caesar(Integer)` : returns a string in which
+# each letter in `String` has been "shifted" by `Integer`
+# number of letters, rolling back to "a" or "A" (depending
+# on case of input letter) after end of alphabet is reached.
+# i.e. `"ab yz CC".caesar(3)` returns `"de bc FF"`.
+#
+# - `String#cypher(options hash)` : helper method for
+# `String#caesar`.
+# `options = {letter: char, shift: Integer, upcase: true/false}`
+# Returns a single character: `:letter` shifted by `:shift`.
+# `:upcase` helps determine alphabet start and end letters
+# (i.e. "a" vs "A"). 
+#
+# - `String#is_upcase?` : returns `true` if `String` is
+# in uppercase.
+#
+# - `Hash#difference(Hash2)` : returns a new hash containing
+# key-value pairs from both hashes -- as long as a given KEY
+# appears ONLY in ONE of the two hashes (i.e. not in both).
+# i.e. `{a: "a", b: "b"}.difference({b: "cat", d: "frog"})`
+# returns `{a: "a", d: "frog"}`.
+#
+# - `Fixnum#stringify(Integer <= 16)` : mimics
+# `Fixnum#to_s(base)`, where `base` is any integer up to base 16.
+#
+# -------------------------------------------------------
+
+class String
+  def caesar(shift = 1)
+    shifted = ""
+    self.each_char do |letter|
+      cypher_options = { letter: letter, shift: shift, upcase: false }
+      cypher_options[:upcase] = true if letter.is_upcase?
+
+      shifted << cypher(cypher_options)
+    end
+    
+    shifted
+  end
+
+  def is_upcase?
+    self == self.upcase
+  end
+
+  def cypher(options)
+    if options[:upcase]
+      first = "A".ord
+      final = "Z".ord
+    else
+      first = "a".ord
+      final = "z".ord
+    end
+
+    letter = options[:letter].ord
+    letter += options[:shift]
+    letter = ( letter % (final + 1) ) + first  if letter > final
+
+    letter.chr
+  end
+end
+
+
+class Hash
+  def difference(other_hash)
+    uniq = {}
+    self.each { |key,val| uniq[key] = val unless other_hash.keys.include?(key) }
+    other_hash.each { |key,val| uniq[key] = val unless self.keys.include?(key) }
+
+    uniq
+  end
+end
+
+
+class Fixnum
+  def stringify(base)
+    raise "Bases between 2 and 16 only!" unless base >= 2 && base <= 16
+    return "0" if self == 0
+
+    keys = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+    values = %w(0 1 2 3 4 5 6 7 8 9 a b c d e f) # spec wants lower case, eww
+    base_digit = Hash[keys.zip(values)]
+
+    pow = 0
+    stringified = ""
+    until self / (base ** pow) == 0 do
+      current_digit = ( self / (base ** pow) ) % base
+      stringified = base_digit[current_digit] + stringified
+
+      pow += 1
+    end
+
+    stringified
+  end
+end
+
+
+
+
+
+# Instructions:
+
 # String: Caesar cipher
 #
 # * Implement a Caesar cipher: http://en.wikipedia.org/wiki/Caesar_cipher
@@ -16,10 +123,9 @@
 # * Lastly, be careful of the letters at the end of the alphabet, like
 #   `"z"`! Ex.: `caesar("zany", 2) # => "bcpa"`
 
-class String
-  def caesar(shift)
-  end
-end
+# Bonus: Refactor your `String#caesar` method to work with strings containing
+# both upper- and lowercase letters.
+
 
 # Hash: Difference
 #
@@ -34,10 +140,6 @@ end
 #  # => { a: "alpha", c: "charlie" }
 # ```
 
-class Hash
-  def difference(other_hash)
-  end
-end
 
 # Stringify
 #
@@ -95,11 +197,3 @@ end
 # character. Make a `Hash` where the keys are digit numbers (up to and
 # including 15) and the values are the characters to use (up to and
 # including `F`).
-
-class Fixnum
-  def stringify(base)
-  end
-end
-
-# Bonus: Refactor your `String#caesar` method to work with strings containing
-# both upper- and lowercase letters.

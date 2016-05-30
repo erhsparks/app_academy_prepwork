@@ -1,3 +1,49 @@
+#!/usr/bin/env ruby
+
+# -------------------------------------------------------
+# course.rb - Lizzi Sparks - May 2016
+#
+# `Course` class:
+# Methods:
+# - `Course#initialize(inputs -- see method, there are many) :
+# assigns each input to a `Course` attribute, as well as
+# assigning attribute `@students` an empty array.
+#
+# - `Course#add_student(Student)` : calls `Student#enroll(Course)`
+# (see ./student.rb -- the above pushes Student onto `@students`)
+#
+# - `Course#conflicts_with?(Course2)` : returns `true` if
+# a Course and Course2 have any `@days` in common if they are
+# held at the same time `@time_block`.
+# 
+# -------------------------------------------------------
+
+class Course
+  attr_reader :name, :department, :credits, :students, :days, :time_block
+
+  def initialize(name, department, credits, days, time_block)
+    @name = name
+    @department = department
+    @credits = credits
+    @students = []
+    @days = days
+    @time_block = time_block
+  end
+
+  def add_student(student)
+    student.enroll(self)
+  end
+
+  def conflicts_with?(course)
+    @time_block == course.time_block && @days.any? { |day| course.days.include?(day) }
+  end
+end
+
+
+
+
+# Instructions (for both course.rb and student.rb)
+
 # Students and Courses
 #
 # Write a set of classes to model `Student`s and `Course`s.
@@ -48,7 +94,3 @@
 # * Update `Student#enroll` so that you raise an error if a `Student`
 #   enrolls in a new course that conflicts with an existing course time.
 #     * May want to write a `Student#has_conflict?` method to help.
-
-class Course
-
-end

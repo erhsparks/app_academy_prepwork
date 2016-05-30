@@ -1,3 +1,61 @@
+#!/usr/bin/env ruby
+
+# -------------------------------------------------------
+# towers_of_hanoi.rb - Lizzi Sparks - May 2016
+#
+# V bare bones version of Towers of Hanoi game
+#
+# `TowersOfHanoi` class:
+# Methods:
+# - `TowersOfHanoi#initialize` : creates our game board,
+# `@towers`, an array of three arrays representing each
+# of the three eponymous towers. Our game has three discs,
+# represented by the integers `1`, `2`, and `3`, `3` being
+# the largest disc and `1` the smallest. They are initialized
+# to a stack on the first tower (`@towers[0]`).
+#
+# - `TowersOfHanoi#move(Index1, Index2)` : moves top disc
+# on tower at `Index1` to tower at `Index2` if that move
+# is allowed (see helper method `#valid_move?(...)`).
+#
+# - `TowersOfHanoi#valid_move?(Index1, Index2)` : returns
+# `true` only if the top disc on `Index1` is smaller than
+# the top disc on `Index2`.
+#
+# - `TowersOfHanoi#won?` : return `true` if all three
+# discs have been moved from the first tower to either of
+# the other two.
+# 
+# -------------------------------------------------------
+
+class TowersOfHanoi
+  attr_reader :towers
+
+  def initialize
+    @towers = [ [3, 2, 1], [ ], [ ] ]
+  end
+
+  def move(from, to)
+    @towers[to] << @towers[from].pop if valid_move?(from, to)
+  end
+
+  def valid_move?(from, to)
+    return true if @towers[to].empty?
+    return false if @towers[from].empty?
+    return false if @towers[from].last > @towers[to].last
+    true
+  end
+
+  def won?
+    @towers[1..2].any? { |tower| tower.size == 3}
+  end
+end
+
+
+
+
+# Instructions:
+
 # Towers of Hanoi
 #
 # Write a Towers of Hanoi game:
@@ -38,7 +96,3 @@
 #
 # Make sure to run bundle install first! The specs assume you've implemented the
 # methods named above.
-
-class TowersOfHanoi
-
-end

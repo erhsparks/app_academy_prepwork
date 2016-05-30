@@ -1,10 +1,144 @@
+#!/usr/bin/env ruby
+
+# -------------------------------------------------------
+# 03_iteration.rb - Lizzi Sparks - May 2016
+#
+# Methods:
+# - `factors(Integer)` : returns an array containing all
+# factors of `Integer`.
+#
+# - `Array#bubble_sort! { opt'l block }` : sorts an array
+# into and order determined by the block. If no block
+# given, sorts array into ascending order.
+#
+# - `Array#bubble_sort { opt'l block }` : does as above but
+# returns a new array, rather than modifying the input array.
+#
+# - `substrings(String)` : returns an array containing every
+# unique sub-string within `String`.
+#
+# - `subwords(String, dictionary array) : returns an array
+# of words found in `dictionary` that are sub-strings of
+# `String`.
+#
+# - `doubler(array of integers)` : returns an array containing
+# values equal to double the corresponding value in the
+# input array. i.e. `doubler([0, 5, 2])` returns `[0, 10, 4]`.
+#
+# - `Array#my_each { block }`   : mimics `Array#each`.
+# - `Array#my_map { block }`    : mimics `Array#map`.
+# - `Array#my_select { block }` : mimics `Array#select`.
+# - `Array#my_inject { block }` : mimics `Array#inject`.
+#
+# - `concatenate(array of strings)` : returns a string
+# containing every element of the input array, concatenated
+# from `array[0] + array[1] + ... + array[-1]` (i.e. left to
+# right.
+#
+# -------------------------------------------------------
+
+def factors(num)
+  factors = []
+  (1..num).each { |test_num| factors << test_num if num % test_num == 0 }
+
+  factors
+end
+
+
+class Array
+  def bubble_sort!(&prc)
+    prc ||= Proc.new { |num1, num2| num1 <=> num2 }
+    (0...self.length).each do
+      for a in 0 ... (self.length - 1) do
+        b = a + 1
+        self[a], self[b] = self[b], self[a] if prc.call(self[a], self[b]) == 1
+      end
+    end
+
+    self
+  end
+
+  def bubble_sort(&prc)
+    sorted_array = self.dup
+    sorted_array.bubble_sort!(&prc)
+  end
+end
+
+
+def substrings(string)
+  sub_strings = []
+  for start_index in 0 ... string.length do
+    for end_index in start_index ... string.length do
+      sub_strings << string[start_index .. end_index]
+    end
+  end
+
+  sub_strings.uniq
+end
+
+def subwords(word, dictionary)
+  words = []
+  substrings(word).each { |string| words << string if dictionary.include?(string) }
+
+  words.uniq
+end
+
+
+def doubler(array)
+  array.map { |element| element *= 2 }
+end
+
+
+class Array
+  def my_each(&prc)
+    for i in 0...self.length do
+      prc.call(self[i])
+    end
+
+    self
+  end
+end
+
+
+class Array
+  def my_map(&prc)
+    mapped = []
+    self.my_each { |element| mapped << prc.call(element) }
+  
+    mapped
+  end
+
+  def my_select(&prc)
+    selected = []
+    self.my_each { |element| selected << element if prc.call(element) }
+
+    selected
+  end
+
+  def my_inject(&blk)
+    accumulator = self.first
+    self.drop(1).my_each { |element| accumulator = blk.call(accumulator, element) }
+
+    accumulator
+  end
+end
+
+
+def concatenate(strings)
+  strings.inject(:+)
+end
+
+
+
+
+
+# Instructions:
+
 # ### Factors
 #
 # Write a method `factors(num)` that returns an array containing all the
 # factors of a given number.
 
-def factors(num)
-end
 
 # ### Bubble Sort
 #
@@ -45,13 +179,6 @@ end
 #
 # http://stackoverflow.com/questions/827649/what-is-the-ruby-spaceship-operator
 
-class Array
-  def bubble_sort!
-  end
-
-  def bubble_sort(&prc)
-  end
-end
 
 # ### Substrings and Subwords
 #
@@ -66,18 +193,11 @@ end
 # `subwords` will accept both a string and a dictionary (an array of
 # words).
 
-def substrings(string)
-end
-
-def subwords(word, dictionary)
-end
 
 # ### Doubler
 # Write a `doubler` method that takes an array of integers and returns an
 # array with the original elements multiplied by two.
 
-def doubler(array)
-end
 
 # ### My Each
 # Extend the Array class to include a method named `my_each` that takes a
@@ -102,10 +222,6 @@ end
 # p return_value # => [1, 2, 3]
 # ```
 
-class Array
-  def my_each(&prc)
-  end
-end
 
 # ### My Enumerable Methods
 # * Implement new `Array` methods `my_map` and `my_select`. Do
@@ -120,16 +236,6 @@ end
 #   (and not the symbol) version. Again, use your `my_each` to define
 #   `my_inject`. Again, do not modify the original array.
 
-class Array
-  def my_map(&prc)
-  end
-
-  def my_select(&prc)
-  end
-
-  def my_inject(&blk)
-  end
-end
 
 # ### Concatenate
 # Create a method that takes in an `Array` of `String`s and uses `inject`
@@ -139,6 +245,3 @@ end
 # concatenate(["Yay ", "for ", "strings!"])
 # # => "Yay for strings!"
 # ```
-
-def concatenate(strings)
-end

@@ -14,6 +14,11 @@ describe String do
     it "encodes a longer word" do
       expect("catzhatz".caesar(2)).to eq("ecvbjcvb")
     end
+
+    # bonus problem: capitals
+    it "can cypher captials, too!" do
+      expect("caTZhAtz".caesar(2)).to eq("ecVBjCvb")
+    end
   end
 end
 

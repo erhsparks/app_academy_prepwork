@@ -1,3 +1,115 @@
+#!/usr/bin/env ruby
+
+# -------------------------------------------------------
+# 05_my_hash_set.rb - Lizzi Sparks - May 2016
+#
+# `MyHashSet` class: mimics ruby's `Set` class, with elements
+# being stored in the `keys` of the `@store` hash and their
+# corresponding `values` set to `true`.
+# Methods:
+# - `MyHashSet#initialize` : sets attribute `@store` to an
+# empty hash.
+#
+# - `MyHashSet#insert(Object)` : inserts an object into the
+# `MyHashSet`s `@store`.
+# 
+# - `MyHashSet#include?(Object)` : returns `true` if the object
+# is stored in the `MyHashSet`.
+# 
+# - `MyHashSet#delete(Object)` : deletes the object from the set.
+# 
+# - `MyHashSet#to_a` : returns an array of all the
+# objects in the set (keys of `@store`).
+# 
+# - `MyHashSet#union(MyHashSet2)` : returns a new `MyHashSet`
+# whose members are all the elements of both input sets (with
+# no duplicates, i.e. if an element is found in both).
+# 
+# - `MyHashSet#intersect(MyHashSet2)` : returns a new `MyHashSet`
+# whose members are all the elements which appear in BOTH input
+# sets.
+# 
+# - `MyHashSet#minus(MyHashSet2)` : returns a new `MyHashSet`
+# whose members are all the elements of the input set EXCEPT
+# those which also are members of `MyHashSet2`.
+# 
+# - `MyHashSet#symmetric_difference(MyHashSet2)` : returns a
+# MyHashSet object containing only the elements that are unique
+# to each MyHashSet (i.e. omits any elements that are contained
+# in both.
+# 
+# - `MyHashSet#==(Object)` : returns `true` only if Object is
+# a `MyHashSet` of equal size to the input `MyHashSet`, and
+# contains exactly the same member elements.
+#
+# -------------------------------------------------------
+
+class MyHashSet
+  def initialize
+    @store = {}
+  end
+
+  def insert(element)
+    @store[element] = true
+  end
+
+  def include?(element)
+    @store.keys.include?(element)
+  end
+
+  def delete(element)
+    @store.delete(element)
+  end
+
+  def to_a
+    elements = []
+    @store.each_key { |key| elements << key }
+
+    elements
+  end
+
+  def union(set2)
+    new_set = MyHashSet.new
+    self.to_a.each { |element| new_set.insert(element) }
+    set2.to_a.each { |el| new_set.insert(el) unless new_set.include?(el) }
+
+    new_set
+  end
+
+  def intersect(set2)
+    new_set = MyHashSet.new
+    self.to_a.each { |element| new_set.insert(element) if set2.include?(element) }
+
+    new_set
+  end
+
+  def minus(set2)
+    new_set = self
+    set2.to_a.each { |element| new_set.delete(element) if set2.include?(element) }
+
+    new_set
+  end
+
+  def symmetric_difference(set2)
+    new_set = MyHashSet.new
+    self.to_a.each { |element| new_set.insert(element) unless set2.include?(element) }
+    set2.to_a.each { |element| new_set.insert(element) unless self.include?(element) }
+
+    new_set
+  end
+
+  def ==(object)
+    object.is_a?(MyHashSet) && (object.to_a.size == self.to_a.size) &&
+      self.to_a.all? { |element| object.include?(element) }
+  end
+end
+
+
+
+
+
+# Instructions:
+
 # MyHashSet
 #
 # Ruby provides a class named `Set`. A set is an unordered collection of
@@ -28,8 +140,6 @@
 # Write a `set1#minus(set2)` method which returns a new set which includes
 # all the items of `set1` that aren't in `set2`.
 
-class MyHashSet
-end
 
 # Bonus
 #

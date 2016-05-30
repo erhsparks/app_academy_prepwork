@@ -100,5 +100,52 @@ describe MyHashSet do
         )
       end
     end
+
+    describe "#symmetric_difference" do
+      it "returns a new set" do
+        expect(set1.symmetric_difference(set2)).to be_a(MyHashSet)
+      end
+
+      it "returns a set containing elements in both sets EXCEPT those which occur in both" do
+        els = set1.symmetric_difference(set2).to_a
+
+        expect(els).to contain_exactly(
+          "Mark Hamill",
+          "Harrison Ford",
+          "Ewan McGregor",
+          "Natalie Portman"
+        )
+      end
+    end
+
+    # setup for #==(object)
+
+    let(:set3) { MyHashSet.new }
+    let(:set4) { MyHashSet.new }
+    let(:set5) { MyHashSet.new }
+    
+    before(:each) do
+      set3.insert("Millenium Falcon")
+      set3.insert("X-Wing")
+      
+      set4.insert("Millenium Falcon")
+      
+      set5.insert("Millenium Falcon")
+      set5.insert("X-Wing")
+    end
+    
+    not_a_set = "USS Enterprise"
+    
+    it "returns false if object isn't a MyHashSet" do
+      expect(set3.==(not_a_set)).to be_falsey
+    end
+    
+    it "returns " do
+      expect(set3.==(set4)).to be_falsey
+    end
+    
+    it "returns " do
+      expect(set3.==(set5)).to be_truthy
+    end
   end
 end

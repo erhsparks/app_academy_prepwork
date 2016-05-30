@@ -90,6 +90,7 @@ describe Fixnum do
 
   it "reads millions" do
     expect(10_000_001.in_words).to eq("ten million one")
+    expect(100_000_001.in_words).to eq("one hundred million one")
   end
 
   it "reads billions" do

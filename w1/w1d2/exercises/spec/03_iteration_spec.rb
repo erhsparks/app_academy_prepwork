@@ -93,6 +93,16 @@ describe Array do
       array.bubble_sort
       expect(duped_array).to eq(array)
     end
+
+    it "will also use a block if given" do
+      sorted = array.bubble_sort do |num1, num2|
+        # order numbers based on descending sort of their squares
+        num2**2 <=> num1**2
+      end
+
+      expect(sorted).to eq([5, 4, 3, 2, 1])
+    end
+
   end
 
   describe "#my_each" do
