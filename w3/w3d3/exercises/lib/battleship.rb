@@ -164,14 +164,17 @@ Enter the coordinates of suspected enemy warships in the form "0,0"
   end
 
   def play_turn
+    print "\n"
     pos = get_play
+    print "\n"
 
     if pos == "q"
       @quit_game = true
     elsif @board.in_range?(pos)
       attack(pos)
+      print "\n"
     else
-      print "\nCoordinates out of map range, Commander! Try again...\n\n"
+      puts "Coordinates out of map range, Commander! Try again..."
       get_play
     end
   end
@@ -197,7 +200,7 @@ Enter the coordinates of suspected enemy warships in the form "0,0"
   end
   
   def register_repeat
-    print "\nYou've already attacked that position...\n\n"
+    print "You've already attacked that position...\n\n"
   end
   
   def hit?
@@ -205,7 +208,7 @@ Enter the coordinates of suspected enemy warships in the form "0,0"
   end
   
   def register_hit
-    print "\nDirect hit!"
+    print "Direct hit!"
     
     ship_sym = @board[current_attack]
     ship_sunk_message(ship_sym) if ship_sunk?(ship_sym)
@@ -231,7 +234,7 @@ Enter the coordinates of suspected enemy warships in the form "0,0"
   end
   
   def register_miss
-    print "\nSplash! You missed!\n\n"
+    print "Splash! You missed!\n\n"
 
     @board.mark_display_grid(current_attack, :~)
     @board[current_attack] = :x

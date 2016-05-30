@@ -56,17 +56,15 @@ class HumanPlayer
   end
 
   def get_play
-    print "\nEnter attack coordinates: "
+    print "Enter attack coordinates: "
     pos = gets.chomp
 
-    if legal_entry?(pos)
-      if pos == "q"
-        pos
-      else
-        pos.split(",").map &:to_i
-      end
+    pos = retry_entry until legal_entry?(pos)
+
+    if pos == "q"
+      pos
     else
-      retry_entry
+      pos.split(",").map &:to_i
     end
   end
 
